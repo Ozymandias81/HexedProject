@@ -1,0 +1,10 @@
+# Let's remove these from commits
+
+*.backup1
+*.backup2
+*.backup3
+*.bak
+*.dbprefab
+*.dbs
+*.rar
+*.zip
