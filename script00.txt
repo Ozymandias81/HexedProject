@@ -1,0 +1,34 @@
+// Decompiled by Universal Strife Dialog Compiler.
+
+namespace = "Strife";
+include = "SCRIPT00";
+
+conversation
+{
+	actor = 1;
+	page
+	{
+		name = "AVATAR";
+		dialog = "HELLO OZYMANDIAS. HAVE YOU SEEN MYTHRAN? I CAME HERE FROM THE PLATEAU NEAR TENEBRAE, BUT I FEAR THAT I'M LOST!";
+		drop = 0;
+		link = 0;
+		choice
+		{
+			text = "OH YES, HE IS NEAR YOUR ASS.";
+			yesmessage = "I DON'T THINK THAT MYTHRAN IS AN ASSHOLE.";
+			nomessage = "-";
+		}
+		choice
+		{
+			text = "NO, I'VE JUST KILLED HIM.";
+			yesmessage = "VERY WELL, I CAN CONTINUE MY JOURNEY IN THE SEARCH OF THE GUARDIAN.";
+			nomessage = "-";
+		}
+		choice
+		{
+			text = "WHAT THE... WHY ARE YOU HERE?";
+			yesmessage = "I DON'T KNOW. A BIG RED HAND DROPPED ME HERE.";
+			nomessage = "-";
+		}
+	}
+}

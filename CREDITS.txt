@@ -1,0 +1,28 @@
+==REMINDER FOR CREDITS==
+
+ACS:
+
+GRAPHICS:
+Blue Sky, Origin
+
+MAPS:
+
+MISC:
+
+MODELS:
+
+MUSIC:
+Blue Sky, Origin
+
+SOUNDS:
+Blue Sky, Origin
+
+SPRITES:
+Blue Sky, Origin
+
+TEXTURES:
+Blue Sky, Origin
+
+==SPECIAL THANKS==
+
+Stephen Clark (UltimateDoomer), Richard Garriot, Kasper Fauerby, ZDoom Community, Raven Software, iD Software

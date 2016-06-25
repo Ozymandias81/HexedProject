@@ -1,0 +1,68 @@
+//Textures & Flats AnimDefs
+
+texture UWT55_1 range UWT55_3 tics 3 //pipe 1
+texture UWT72_1 range UWT72_3 tics 3 //pipe 2
+texture UWT86_1 range UWT86_3 tics 3 //pipe 3
+texture UWT92_1 range UWT92_3 tics 3 //pipe 4
+texture UWT106_1 range UWT106_3 tics 3 //pipe 5
+texture UWT123_1 range UWT123_3 tics 3 //pipe 6
+texture UWT144_1 range UWT144_3 tics 3 //pipe 7
+texture UWT159_1 range UWT159_3 tics 3 //pipe 8
+texture UWT173_1 range UWT173_3 tics 3 //pipe 9
+texture UWT184_1 range UWT184_3 tics 3 //pipe 10
+texture UWT186_1 range UWT186_3 tics 3 //pipe 11
+texture UWT202_1 range UWT202_3 tics 3 //pipe 12
+texture UWT222_1 range UWT222_3 tics 3 //pipe 13
+texture UWT250_1 range UWT250_3 tics 3 //big water
+texture UWT258_1 range UWT258_7 tics 7 //big lava
+texture UWT16_1 range UWT16_3 tics 3 //water flat calm
+texture UWT17_1 range UWT17_3 tics 3 //water flat N
+texture UWT32_1 range UWT32_3 tics 3 //water flat W
+texture UWT33_1 range UWT33_3 tics 3 //water flat S
+texture UWT34_1 range UWT34_3 tics 3 //water flat E
+texture UWT20_1 range UWT20_7 tics 7 //lavasand flat N
+texture UWT22_1 range UWT22_7 tics 7 //lavasand flat W
+texture UWT21_1 range UWT21_7 tics 7 //lavasand flat S
+texture UWT19_1 range UWT19_7 tics 7 //lavasand flat E
+texture UWT23_1 range UWT23_7 tics 7 //lavasand flat reticle1
+texture UWT41_1 range UWT41_7 tics 7 //lavasand flat reticle2
+texture UWT24_1 range UWT24_7 tics 7 //lava flat 1
+texture UWT25_1 range UWT25_7 tics 7 //lava flat 2
+texture UWT37_1 range UWT37_3 tics 3 //shore flat N
+texture UWT38_1 range UWT38_3 tics 3 //shore flat W
+texture UWT39_1 range UWT39_3 tics 3 //shore flat S
+texture UWT40_1 range UWT40_3 tics 3 //shore flat E
+texture UWT45_1 range UWT45_3 tics 3 //green blinking flat (NEW!)
+texture UWT48_1 range UWT48_3 tics 3 //red blinking flat (NEW!)
+texture UWT51_1 range UWT51_3 tics 3 //blue blinking flat (NEW!)
+
+//Animated Switches
+
+texture UWSWTC1A on pic UWSWTC1B tics 0
+texture UWSWTC1B on pic UWSWTC1A tics 0
+texture UWSWTC2A on pic UWSWTC2B tics 0
+texture UWSWTC2B on pic UWSWTC2A tics 0
+texture UWSWTC3A on pic UWSWTC3B tics 0
+texture UWSWTC3B on pic UWSWTC3A tics 0
+texture UWSWTC4A on pic UWSWTC4B tics 0
+texture UWSWTC4B on pic UWSWTC4A tics 0
+texture UWSWTC5A on pic UWSWTC5B tics 0
+texture UWSWTC5B on pic UWSWTC5A tics 0
+texture UWSWTC6A on pic UWSWTC6B tics 0
+texture UWSWTC6B on pic UWSWTC6A tics 0
+texture UWSWTC7A on pic UWSWTC7B tics 0
+texture UWSWTC7B on pic UWSWTC7A tics 0
+texture UWSWTC8A on pic UWSWTC8B tics 0
+texture UWSWTC8B on pic UWSWTC8A tics 0
+
+//Animated Switches that may need some ACS
+
+texture UWSEQ1A on pic UWSEQ1B tics 0
+texture UWSEQ1C on pic UWSEQ1D tics 0
+texture UWSEQ1E on pic UWSEQ1F tics 0
+texture UWSEQ1G on pic UWSEQ1H tics 0
+texture UWSEQ2A on pic UWSEQ2B tics 0
+texture UWSEQ2C on pic UWSEQ2D tics 0
+texture UWSEQ2E on pic UWSEQ2F tics 0
+texture UWSEQ2G on pic UWSEQ2H tics 0
+

@@ -1,0 +1,28 @@
+Actor Avatar : ZombieMan 16000
+{
+//$Category Experiments
+Tag "Avatar"
+speed 4
+height 52
+radius 16
+MaxStepHeight 16
+MaxDropoffHeight 32
+MONSTER
++FLOORCLIP
++FRIENDLY
++PUSHABLE
++INVULNERABLE
+BloodColor "Red"
+ConversationID 1
+Translation 0
+Scale 1.1
+States
+	{
+	Spawn:
+	AVTR A 1 A_Look2
+	loop
+	See:
+	AVTR BCDEFGHI 4 A_Wander
+	loop
+	}
+}
