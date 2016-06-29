@@ -1,0 +1,30 @@
+Mantras in Ultima Underworld I: The Stygian Abyss
+
+Mantra     Skill(s)
+-----------------------------------------------------------------------
+Summ Ra    Attack, Defense, all weapon-skills, Unarmed
+Mu Ahm     Mana, Casting, Lore
+Om Cah     Swimming, Traps, Charm, Repair, Picklock, Sneak, Search,
+           Appraise, Track, Acrobat
+
+Fal        Acrobat
+Hunn       Appraise
+Ra         Attack
+Gar        Axe
+Sol        Casting
+Un         Charm
+Anra       Defense
+Lahn       Lore
+Koh        Mace
+Imu        Mana
+Fahm       Missile
+Aam        Picklock
+Lon        Repair
+Lu         Search
+Mul        Sneak
+Ono        Swimming
+Amo        Sword
+Sahf       Tracking
+Romm       Traps
+Ora        Unarmed
+-----------------------------------------------------------------------

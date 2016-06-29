@@ -1,5 +1,5 @@
 //Textures & Flats AnimDefs
-
+/*
 texture UWT55_1 range UWT55_3 tics 3 //pipe 1
 texture UWT72_1 range UWT72_3 tics 3 //pipe 2
 texture UWT86_1 range UWT86_3 tics 3 //pipe 3
@@ -65,4 +65,4 @@ texture UWSEQ2A on pic UWSEQ2B tics 0
 texture UWSEQ2C on pic UWSEQ2D tics 0
 texture UWSEQ2E on pic UWSEQ2F tics 0
 texture UWSEQ2G on pic UWSEQ2H tics 0
-
+*/

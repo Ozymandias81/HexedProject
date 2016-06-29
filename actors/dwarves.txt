@@ -1,4 +1,4 @@
-ACTOR DwarfA : StrifeHumanoid 32220
+/*ACTOR DwarfA : StrifeHumanoid 32220
 {
 Health 20
 PainChance 250
@@ -51,4 +51,4 @@ States
 	GIBS V 1400
 	Stop
 	}
-}
+}*/
