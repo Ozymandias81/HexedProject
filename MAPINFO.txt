@@ -157,14 +157,53 @@ defaultmap
 	disableskyboxao
 }
 
-map UWINTMAP lookup "UWINTMAP"
-{
-	levelnum = 99
-	cluster = 1
-}
-
 map TITLEMAP lookup "TITLEMAP"
 {
-	music = "THEME"
+	music = "HUWINTRO"
 	NoAutosaveHint 
+}
+
+map MAP01 lookup "HUWMAP01"
+{
+	music = "UWWAND"
+}
+
+map MAP02 lookup "HUWMAP02"
+{
+	music = "UWMAPS"
+}
+
+map MAP03 lookup "HUWMAP03"
+{
+	music = "SEWERS"
+}
+
+map MAP04 lookup "HUWMAP04"
+{
+	music = "UWDESC"
+}
+
+map MAP05 lookup "HUWMAP05"
+{
+	music = "UWWAND"
+}
+
+map MAP06 lookup "HUWMAP06"
+{
+	music = "UWWAND"
+}
+
+map MAP07 lookup "HUWMAP07"
+{
+	music = "UWWAND"
+}
+
+map MAP08 lookup "HUWMAP08"
+{
+	music = "UWWAND"
+}
+
+map MAP00 lookup "HUWMAP00"
+{
+	music = "UWWAND"
 }
