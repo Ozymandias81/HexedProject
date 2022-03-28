@@ -1,4 +1,36 @@
-//ACTORS
-
+//MAIN
 #include "actors/avatar.txt"
+#include "actors/tests.txt"
+
+/*
+//FOES
+#include "actors/bats.txt"
+#include "actors/demon.txt"
 #include "actors/dwarves.txt"
+#include "actors/elementals.txt"
+#include "actors/females_f.txt"
+#include "actors/females_w.txt"
+#include "actors/gazer.txt"
+#include "actors/ghosts.txt"
+#include "actors/ghouls.txt"
+#include "actors/golem.txt"
+#include "actors/graygobs.txt"
+#include "actors/grengobs.txt"
+#include "actors/headless.txt"
+#include "actors/imps.txt"
+#include "actors/lizardmen.txt"
+#include "actors/lurker.txt"
+#include "actors/male_f.txt"
+#include "actors/male_w.txt"
+#include "actors/rats.txt"
+#include "actors/reaper.txt"
+#include "actors/rotworms.txt"
+#include "actors/shadows.txt"
+#include "actors/skeleton.txt"
+#include "actors/slugs.txt"
+#include "actors/spiders.txt"
+#include "actors/staff_w.txt"
+#include "actors/trolls.txt"
+#include "actors/tybal.txt"
+#include "actors/wisp.txt"
+*/

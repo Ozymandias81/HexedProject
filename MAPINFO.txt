@@ -25,7 +25,7 @@ gameinfo
 /*
 	armoricons = "armh04", 0.1, "armh04"
 
-	cursorpic = "uwcurs"
+	cursorpic = "huwcurs"
 	pausesign = "paused"
 	menubackbutton = "M_BACK"
 
@@ -33,22 +33,13 @@ gameinfo
 
 	borderflat = "textures/cncr_grn.jpg"
 
-	defaultconversationmenuclass = "BoAConversationMenu"
+	defaultconversationmenuclass = "HUWConversationMenu"
 	MessageboxClass = "ClassicMessageBox"
-	statusbarclass = "BoAStatusBar"
+	statusbarclass = "HUWStatusBar"
 
 	ForceKillScripts = true //needed for Droplets - ozy81
 
-	AddEventHandlers = "InventoryClearHandler", "WaterHandler",
-	"CustomShaderHandler", "MineSweeperHandler", "CompassHandler",
-	"MapStatsHandler", "PersistentMapStatsHandler", "UnderlayRenderer",
-	"TcPostProcessShaderHandler", "InteractionHandler", "LoadScreen",
-	"KeyHandler", "ParticleManager", "GroundSplashDataHandler",
-	"DebugEventHandler", "WideObjectivesDataHandler", "ScreenLabelHandler",
-	"MessageHandler", "PersistentMessageHandler", "ObjectiveHandler",
-	"MessageLogHandler", "DamageTracker", "ThingTracker", "InventoryTracker",
-	"AchievementTracker", "PersistentAchievementTracker", "PickupSpecialFix",
-	"PlayerCheckpointManager"
+	AddEventHandlers = 
 
 	ChatSound = "misc/chat"
 
@@ -139,15 +130,14 @@ Intermission Automap_Hack
 
 defaultmap
 {
-	lightmode = 3
-	Sky1 = "F_SKY1"
-	MapBackground = "MAP_BG"
+	//lightmode = 3
+	//Sky1 = "F_SKY1"
+	MapBackground = "blnkmap"
 	nointermission
-	UnFreezeSinglePlayerConversations
 	ForceFallingDamage
 	MonsterFallingDamage
-	EnterPic = "CONBACK"
-	ExitPic = "CONBACK"
+	//EnterPic = "CONBACK"
+	//ExitPic = "CONBACK"
 
 	// Force breaking compatibility options off
 	compat_maskedmidtex = 0
