@@ -4,6 +4,7 @@
 
 gameinfo
 {
+	PlayerClasses = "AvatarPlayer"
 	menufontcolor_title = "DARKGRAY"
 	menufontcolor_label = "DARKGRAY"
 	menufontcolor_value = "DARKGRAY"
@@ -130,7 +131,7 @@ Intermission Automap_Hack
 
 defaultmap
 {
-	//lightmode = 3
+	lightmode = 3
 	//Sky1 = "F_SKY1"
 	MapBackground = "blnkmap"
 	nointermission
@@ -196,4 +197,9 @@ map MAP08 lookup "HUWMAP08"
 map MAP00 lookup "HUWMAP00"
 {
 	music = "UWWAND"
+}
+
+DoomEdNums
+{
+	16000=PaganU8
 }
