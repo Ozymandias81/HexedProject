@@ -59,9 +59,9 @@ vec2 ParallaxMap(mat3 tbn)
 #elif defined(RELIEF_PARALLAX)
 vec2 ParallaxMap(mat3 tbn)
 {
-    const float parallaxScale = 0.48;
-    const float minLayers = 8.0;
-    const float maxLayers = 12.0;
+    const float parallaxScale = 0.52;
+    const float minLayers = 2.0;
+    const float maxLayers = 4.0;
 
     // Calculate fragment view direction in tangent space
     mat3 invTBN = transpose(tbn);
@@ -71,7 +71,7 @@ vec2 ParallaxMap(mat3 tbn)
     float numLayers = mix(maxLayers, minLayers, clamp(abs(V.z), 0.0, 1.0)); // clamp is required due to precision loss
 
     // calculate the size of each layer
-    float layerDepth = 1.0 / numLayers;
+    float layerDepth = 1.75 / numLayers;
 
     // depth of current layer
     float currentLayerDepth = 0.0;

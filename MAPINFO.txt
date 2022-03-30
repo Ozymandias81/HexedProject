@@ -154,47 +154,47 @@ map TITLEMAP lookup "TITLEMAP"
 	NoAutosaveHint 
 }
 
-map MAP01 lookup "HUWMAP01"
+map HUWMAP01 lookup "HUWMAP01"
 {
 	music = "UWWAND"
 }
 
-map MAP02 lookup "HUWMAP02"
+map HUWMAP02 lookup "HUWMAP02"
 {
 	music = "UWMAPS"
 }
 
-map MAP03 lookup "HUWMAP03"
+map HUWMAP03 lookup "HUWMAP03"
 {
 	music = "SEWERS"
 }
 
-map MAP04 lookup "HUWMAP04"
+map HUWMAP04 lookup "HUWMAP04"
 {
 	music = "UWDESC"
 }
 
-map MAP05 lookup "HUWMAP05"
+map HUWMAP05 lookup "HUWMAP05"
 {
 	music = "UWWAND"
 }
 
-map MAP06 lookup "HUWMAP06"
+map HUWMAP06 lookup "HUWMAP06"
 {
 	music = "UWWAND"
 }
 
-map MAP07 lookup "HUWMAP07"
+map HUWMAP07 lookup "HUWMAP07"
 {
 	music = "UWWAND"
 }
 
-map MAP08 lookup "HUWMAP08"
+map HUWMAP08 lookup "HUWMAP08"
 {
 	music = "UWWAND"
 }
 
-map MAP00 lookup "HUWMAP00"
+map HUWMAP00 lookup "HUWMAP00"
 {
 	music = "UWWAND"
 }

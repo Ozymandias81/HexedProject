@@ -6,6 +6,7 @@ GRAPHICS:
 Blue Sky, Origin
 
 MAPS:
+Sir Robin, Blue Sky, Ozymandias81
 
 MISC:
 
@@ -21,10 +22,10 @@ SPRITES:
 Blue Sky, Origin
 
 SHADERS:
-AFADoomer, Talon1024
+AFADoomer, Talon1024, Ozymandias81
 
 TEXTURES:
-Blue Sky, Origin
+Blue Sky, Origin, Ozymandias81
 
 ==SPECIAL THANKS==
 

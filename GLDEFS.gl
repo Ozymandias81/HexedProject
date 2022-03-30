@@ -3,3 +3,81 @@ material texture "textures/doors/UWDR_01.png"
 	shader "shaders/displacement.fp"
 	texture displacement "materials/displacement/UWDR_01.png"
 }
+
+material texture "textures/doors/UWDR_02.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_02.png"
+}
+
+material texture "textures/doors/UWDR_03.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_03.png"
+}
+
+material texture "textures/doors/UWDR_04.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_04.png"
+}
+
+material texture "textures/doors/UWDR_05.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_05.png"
+}
+
+material texture "textures/doors/UWDR_06.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_06.png"
+}
+
+material texture "textures/doors/UWDR_07.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_07.png"
+}
+
+material texture "textures/doors/UWDR_08.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_08.png"
+}
+
+material texture "textures/doors/UWDR_09.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_09.png"
+}
+
+material texture "textures/doors/UWDR_10.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_10.png"
+}
+
+material texture "textures/doors/UWDR_11.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_11.png"
+}
+
+material texture "textures/doors/UWDR_12.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_12.png"
+}
+
+material texture "textures/doors/UWDR_13.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_13.png"
+}
+
+material texture "textures/doors/UWDR_14.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_14.png"
+}

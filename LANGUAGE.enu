@@ -1,3 +1,14 @@
 [enu default]
 
 HUW_VER	= "Hexed Underworld v0.01";
+
+HUWMAP00 = "TestMap";
+HUWMAP01 = "One";
+HUWMAP02 = "Two";
+HUWMAP03 = "Three";
+HUWMAP04 = "Four";
+HUWMAP05 = "Five";
+HUWMAP06 = "Six";
+HUWMAP07 = "Seven";
+HUWMAP08 = "Eight";
+HUWMAP09 = "The Void";
