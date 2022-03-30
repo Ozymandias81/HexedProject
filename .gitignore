@@ -8,3 +8,8 @@
 *.dbs
 *.rar
 *.zip
+*.7z
+
+# Then ignore these folders
+
+_stuff/*

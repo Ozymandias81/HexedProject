@@ -1,0 +1,3 @@
+zscript.zs		linguist-language=C#
+zscript/*.zs	linguist-language=C#
+zscript/**/*.zs	linguist-language=C#

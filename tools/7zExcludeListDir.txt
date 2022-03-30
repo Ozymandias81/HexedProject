@@ -1,6 +1,6 @@
 tools
 .git*
-_docs
+_stuff
 build.bat
 build.sh
 

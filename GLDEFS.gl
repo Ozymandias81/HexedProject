@@ -1,0 +1,5 @@
+material texture "textures/doors/UWDR_01.png"
+{
+	shader "shaders/displacement.fp"
+	texture displacement "materials/displacement/UWDR_01.png"
+}

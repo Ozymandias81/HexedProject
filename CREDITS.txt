@@ -20,9 +20,12 @@ Blue Sky, Origin
 SPRITES:
 Blue Sky, Origin
 
+SHADERS:
+AFADoomer, Talon1024
+
 TEXTURES:
 Blue Sky, Origin
 
 ==SPECIAL THANKS==
 
-Stephen Clark (UltimateDoomer), Richard Garriot, Kasper Fauerby, ZDoom Community, Raven Software, iD Software
+Sir Robin, Kasper Fauerby
