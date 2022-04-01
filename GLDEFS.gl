@@ -1,3 +1,41 @@
+//HeatEffect shader
+HardwareShader PostProcess scene {
+	Name "heatshader"
+	Shader "shaders/heat.fp" 330
+	Uniform float amount
+	Uniform float timer
+}
+
+//Underwater shader
+HardwareShader PostProcess scene
+{
+	Name "watershader"
+	Shader "shaders/uwater.fp" 330
+	Uniform float waterFactor
+	Uniform float timer // placeholder?
+}
+
+HardwareShader PostProcess scene
+{
+	Name "waterzoomshader"
+	Shader "shaders/uwaterzoom.fp" 330
+	Uniform float zoomFactor
+}
+
+//Rotating Dark Smoke
+HardwareShader Sprite DKS2A0
+{
+	Shader "shaders/rotate.fp"
+	Speed 0.8
+}
+
+HardwareShader Sprite DKSMA0
+{
+	Shader "shaders/rotate.fp"
+	Speed 0.8
+}
+
+//DISPLACMENTS
 material texture "textures/doors/UWDR_01.png"
 {
 	shader "shaders/displacement.fp"

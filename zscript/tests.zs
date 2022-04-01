@@ -26,19 +26,17 @@ Class PaganU8 : Ettin
 	{
 		//$Category HexedUW/EasterEggs
 		//$Title "Avatar from Ultima 8"
+		Tag "Avatar";
 		Speed 4;
 		Height 52;
 		Radius 16;
-		Scale 1.1;
+		Scale 1.3;
 		MaxStepHeight 16;
 		MaxDropoffHeight 32;
 		+FLOORCLIP
 		+FRIENDLY
 		+PUSHABLE
 		+INVULNERABLE
-		BloodColor "Red";
-		Translation 0;
-		//ConversationID 1;
 	}
 	
 	States

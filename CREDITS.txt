@@ -1,9 +1,10 @@
 ==REMINDER FOR CREDITS==
 
 ACS:
+AFADoomer, Talon1024, Ozymandias81
 
 GRAPHICS:
-Blue Sky, Origin
+Blue Sky, Origin, Ozymandias81
 
 MAPS:
 Sir Robin, Blue Sky, Ozymandias81
@@ -11,6 +12,7 @@ Sir Robin, Blue Sky, Ozymandias81
 MISC:
 
 MODELS:
+AFADoomer
 
 MUSIC:
 Blue Sky, Origin
@@ -26,6 +28,9 @@ AFADoomer, Talon1024, Ozymandias81
 
 TEXTURES:
 Blue Sky, Origin, Ozymandias81
+
+ZSCRIPT:
+Sir Robin, AFADoomer, Talon1024, Tormentor667, Ozymandias81
 
 ==SPECIAL THANKS==
 

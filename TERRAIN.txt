@@ -1,0 +1,157 @@
+////////////////////////////////////////
+// Splashes & Terrain Definitions //////
+////////////////////////////////////////
+
+splash HUW_Water
+{
+	smallclass		HUW_WaterSplash
+	smallclip		8
+	smallsound		world/drip
+	baseclass		HUW_WaterSplash
+	chunkclass		HUW_WaterSplash_Chunk
+	chunkxvelshift	9
+	chunkyvelshift	9
+	chunkzvelshift	7
+	chunkbasezvel	2
+	sound			world/watersplash
+	noalert
+}
+
+terrain HUW_Water
+{
+	splash	HUW_Water
+	liquid
+}
+
+splash HUW_Blood
+{
+	smallclass		HUW_BloodSplash
+	smallclip		8
+	smallsound		world/sludgegloopsmall
+	baseclass		HUW_BloodSplash
+	chunkclass		HUW_BloodSplash_Chunk
+	chunkxvelshift	9
+	chunkyvelshift	9
+	chunkzvelshift	7
+	chunkbasezvel	2
+	sound			world/sludgegloop
+	noalert
+}
+
+terrain HUW_Blood
+{
+	splash	HUW_Blood
+	liquid
+}
+
+splash HUW_Lava
+{
+	smallclass		HUW_LavaSplash
+	smallclip		0
+	smallsound		world/lavasizzle
+	baseclass		HUW_LavaSplash
+	chunkclass		HUW_LavaSplash_Chunk
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+	noalert
+}
+
+terrain HUW_Lava
+{
+	splash	HUW_Lava
+	liquid
+}
+
+splash HUW_Slime
+{
+	smallclass		HUW_SlimeSplash
+	smallclip		0
+	smallsound		world/sludgegloop
+	baseclass		HUW_SlimeSplash
+	chunkclass		HUW_SlimeSplash_Chunk
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	1
+	sound			world/sludgegloop
+	noalert
+}
+
+terrain HUW_Slime
+{
+	splash	HUW_Slime
+	liquid
+}
+
+splash HUW_Nukage
+{
+	smallclass		HUW_NukageSplash
+	smallclip		0
+	smallsound		world/lavasizzle
+	baseclass		HUW_NukageSplash
+	chunkclass		HUW_NukageSplash_Chunk
+	chunkxvelshift	9
+	chunkyvelshift	9
+	chunkzvelshift	7
+	chunkbasezvel	2
+	sound			world/lavasizzle
+	noalert
+}
+
+terrain HUW_Nukage
+{
+	splash	HUW_Nukage
+	liquid
+}
+
+splash HUW_Sizzle
+{
+	smallclass		HUW_LavaSmoke
+	smallclip		0
+	smallsound		world/lavasizzle
+	baseclass		HUW_LavaSmoke
+	chunkclass		none
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+	noalert
+}
+
+terrain HUW_Sizzle
+{
+	splash	HUW_Sizzle
+}
+
+//Defs - longnamed tx not included!
+floor uw1tex16 HUW_Water
+floor uw1tex19 HUW_Sizzle
+floor uw1tex20 HUW_Sizzle
+floor uw1tex21 HUW_Sizzle
+floor uw1tex22 HUW_Sizzle
+floor uw1tex23 HUW_Sizzle
+floor uw1tex24 HUW_Lava
+floor uw1tex25 HUW_Lava
+floor uw1tex32 HUW_Water
+floor uw1tex33 HUW_Water
+floor uw1tex34 HUW_Water
+floor uw1tex41 HUW_Sizzle
+
+floor textures/animated/uw1tex16.png HUW_Water
+floor textures/animated/uw1tex19.png HUW_Sizzle
+floor textures/animated/uw1tex20.png HUW_Sizzle
+floor textures/animated/uw1tex21.png HUW_Sizzle
+floor textures/animated/uw1tex22.png HUW_Sizzle
+floor textures/animated/uw1tex23.png HUW_Sizzle
+floor textures/animated/uw1tex24.png HUW_Lava
+floor textures/animated/uw1tex25.png HUW_Lava
+floor textures/animated/uw1tex32.png HUW_Water
+floor textures/animated/uw1tex33.png HUW_Water
+floor textures/animated/uw1tex34.png HUW_Water
+floor textures/animated/uw1tex41.png HUW_Sizzle
+floor textures/animated/uw1tex250.png HUW_Water	//only longanmed
+floor textures/animated/uw1tex258.png HUW_Lava	//only longanmed

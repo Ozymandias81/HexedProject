@@ -3,15 +3,25 @@
 HUW_VER	= "Hexed Underworld v0.01";
 
 HUWMAP00 = "TestMap";
-HUWMAP01 = "One";
-HUWMAP02 = "Two";
-HUWMAP03 = "Three";
-HUWMAP04 = "Four";
-HUWMAP05 = "Five";
-HUWMAP06 = "Six";
-HUWMAP07 = "Seven";
-HUWMAP08 = "Eight";
+HUWMAP01 = "You Are On The First Floor Of The Stygian Darkmere";
+HUWMAP02 = "You Are On The Second Floor Of The Stygian Darkmere";
+HUWMAP03 = "You Are On The Third Floor Of The Stygian Darkmere";
+HUWMAP04 = "You Are On The Fourth Floor Of The Stygian Darkmere";
+HUWMAP05 = "You Are On The Fifth Floor Of The Stygian Darkmere";
+HUWMAP06 = "You Are On The Sixth Floor Of The Stygian Darkmere";
+HUWMAP07 = "You Are On The Seventh Floor Of The Stygian Darkmere";
+HUWMAP08 = "You Are On The Eigthth Floor Of The Stygian Darkmere";
 HUWMAP09 = "The Void";
+
+//Menues
+MN_OPDIST = "Rendering Distance";
+MN_OPFAR1 = "Far";
+MN_OPFAR2 = "Very Far";
+MN_OPHEAT = "Heat Effect";
+MN_OPNEAR = "Near";
+MN_OPNONE = "None";
+MN_OPNORM = "Normal";
+MN_OPZHUW = "PLEASE CONFIGURE THESE OPTIONS BEFORE PLAYING!";
 
 //Taken from Sir Robin UW1 language file, actors names
 UWSTRING_7_17="Corby";
