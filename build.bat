@@ -130,10 +130,10 @@ REM # Documentation
 REM #     Displays the title of the program.
 REM # ================================================================================================
 :BufferHeader
-ECHO Gore Compiler
-ECHO =============
-ECHO -------------
-ECHO =============
+ECHO HexedUW Compiler
+ECHO ===============
+ECHO ---------------
+ECHO ===============
 ECHO.&ECHO.&ECHO.
 GOTO :EOF
 

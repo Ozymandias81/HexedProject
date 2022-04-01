@@ -1,4 +1,23 @@
-//Textures & Flats AnimDefs
+//Animated Switches
+
+switch "textures/switches/UWSW_01.png" on SOUND UWBUTTNS pic "textures/switches/UWSW_02.png" tics 0
+switch "textures/switches/UWSW_03.png" on SOUND UWBUTTNS pic "textures/switches/UWSW_04.png" tics 0
+switch "textures/switches/UWSW_05.png" on SOUND UWBUTTNS pic "textures/switches/UWSW_06.png" tics 0
+switch "textures/switches/UWSW_07.png" on SOUND UWSWITCS pic "textures/switches/UWSW_08.png" tics 0
+switch "textures/switches/UWSW_09.png" on SOUND UWSWITCS pic "textures/switches/UWSW_10.png" tics 0
+switch "textures/switches/UWSW_11.png" on SOUND UWSWITCS pic "textures/switches/UWSW_12.png" tics 0
+switch "textures/switches/UWSW_13.png" on SOUND UWCHAINS pic "textures/switches/UWSW_14.png" tics 0
+switch "textures/switches/UWSW_15.png" on SOUND UWCHAINS pic "textures/switches/UWSW_16.png" tics 0
+
+switch UWSW_01 on SOUND UWBUTTNS pic UWSW_02 tics 0
+switch UWSW_03 on SOUND UWBUTTNS pic UWSW_04 tics 0
+switch UWSW_05 on SOUND UWBUTTNS pic UWSW_06 tics 0
+switch UWSW_07 on SOUND UWSWITCS pic UWSW_08 tics 0
+switch UWSW_09 on SOUND UWSWITCS pic UWSW_10 tics 0
+switch UWSW_11 on SOUND UWSWITCS pic UWSW_12 tics 0
+switch UWSW_13 on SOUND UWCHAINS pic UWSW_14 tics 0
+switch UWSW_15 on SOUND UWCHAINS pic UWSW_16 tics 0
+
 /*
 texture UWT55_1 range UWT55_3 tics 3 //pipe 1
 texture UWT72_1 range UWT72_3 tics 3 //pipe 2
@@ -35,25 +54,6 @@ texture UWT40_1 range UWT40_3 tics 3 //shore flat E
 texture UWT45_1 range UWT45_3 tics 3 //green blinking flat (NEW!)
 texture UWT48_1 range UWT48_3 tics 3 //red blinking flat (NEW!)
 texture UWT51_1 range UWT51_3 tics 3 //blue blinking flat (NEW!)
-
-//Animated Switches
-
-texture UWSWTC1A on pic UWSWTC1B tics 0
-texture UWSWTC1B on pic UWSWTC1A tics 0
-texture UWSWTC2A on pic UWSWTC2B tics 0
-texture UWSWTC2B on pic UWSWTC2A tics 0
-texture UWSWTC3A on pic UWSWTC3B tics 0
-texture UWSWTC3B on pic UWSWTC3A tics 0
-texture UWSWTC4A on pic UWSWTC4B tics 0
-texture UWSWTC4B on pic UWSWTC4A tics 0
-texture UWSWTC5A on pic UWSWTC5B tics 0
-texture UWSWTC5B on pic UWSWTC5A tics 0
-texture UWSWTC6A on pic UWSWTC6B tics 0
-texture UWSWTC6B on pic UWSWTC6A tics 0
-texture UWSWTC7A on pic UWSWTC7B tics 0
-texture UWSWTC7B on pic UWSWTC7A tics 0
-texture UWSWTC8A on pic UWSWTC8B tics 0
-texture UWSWTC8B on pic UWSWTC8A tics 0
 
 //Animated Switches that may need some ACS
 

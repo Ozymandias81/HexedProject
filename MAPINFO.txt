@@ -4,40 +4,84 @@
 
 gameinfo
 {
-	PlayerClasses = "AvatarPlayer"
-	menufontcolor_title = "DARKGRAY"
-	menufontcolor_label = "DARKGRAY"
-	menufontcolor_value = "DARKGRAY"
-	menufontcolor_action = "DARKGRAY"
-	menufontcolor_header = "DARKGRAY"
-	menufontcolor_highlight = "MENUBLACK"
-	menufontcolor_selection = "MENUBLACK"
-
-	MenuSliderColor = "RED"
-
-	dimcolor = "133049"
+	cursorpic = "HUWCURS"
+	
+	noloopfinalemusic = true
+	titlepage = "TITLE"
+	creditpage = "CREDIT"
+	titlemusic = "HEXEN"
+	titletime = 8
+	advisorytime = 6
+	pagetime = 5
+	chatsound = "Chat"
+	finalemusic = "hub"
+	finaleflat = "UW_WIN0"
+	finalepage = "CREDIT"
+	infopage = "cr_000", "cr_001", "cr_002", "cr_003", "cr_004", "cr_005", "cr_006", "cr_007", "cr_008", "cr_009", "cr_010", "cr_011", "cr_012", "cr_013", "CREDIT"
+	quitsound = ""
+	borderflat = "UW1TEX49"
+	border = HereticBorder
+	telefogheight = 32
+	defkickback = 150
+	skyflatname = "F_SKY"
+	translator = "xlat/heretic.txt"	// not really correct but this was used before.
+	defaultbloodcolor = "68 00 00"
+	defaultbloodparticlecolor = "ff 00 00"
+	backpacktype = "BagOfHolding"	// Hexen doesn't have a backpack so use Heretic's.
+	statusbarclass = "HexenStatusBar"
+	intermissionmusic = "hub"
+	intermissioncounter = false
+	weaponslot = 1, "FWeapFist", "CWeapMace", "MWeapWand"
+	weaponslot = 2, "FWeapAxe", "CWeapStaff", "MWeapFrost"
+	weaponslot = 3, "FWeapHammer", "CWeapFlame", "MWeapLightning"
+	weaponslot = 4, "FWeapQuietus", "CWeapWraithverge", "MWeapBloodscourge"
+	dimcolor = "00 00 40"
 	dimamount = 0.5
-	fullscreenautoaspect = 3
-	pickupcolor = "FFFFFF"
-
-	statscreen_mapnamefont = "BIGFONT", "DARKGRAY"
-	statscreen_finishedfont = "BIGFONT", "DARKGRAY"
-	statscreen_enteringfont = "BIGFONT", "DARKGRAY"
+	bluramount = 0.0
+	menuslidercolor = "Orange"
+	menusliderbackcolor = "White"
+	definventorymaxamount = 25
+	defaultrespawntime = 12
+	defaultdropstyle = 1
+	pickupcolor = "d7 ba 45"
+	quitmessages = "$*RAVENQUITMSG"
+	menufontcolor_title = "UNTRANSLATED"
+	menufontcolor_label = "RED"
+	menufontcolor_value = "UNTRANSLATED"
+	menufontcolor_action = "UNTRANSLATED"
+	menufontcolor_header = "GOLD"
+	menufontcolor_highlight = "YELLOW"
+	menufontcolor_selection = "BRICK"
+	menubackbutton = "M_BACK_X"
+	PlayerClasses = "AvatarPlayer"
+	nightmarefast = true
+	pausesign = "PAUSED"
+	gibfactor = 0.5
+	textscreenx = 10
+	textscreeny = 5
+	defaultendsequence = "Inter_Chess"
+	maparrow = "maparrows/dagger.txt"
+	statscreen_mapnamefont = "*BigFont"
+	statscreen_finishedfont = "*SmallFont"
+	statscreen_enteringfont = "*SmallFont"
+	statscreen_contentfont = "*BigFont"
+	statscreen_authorFont = "*SmallFont"
+	statscreen_coop = "CoopStatusScreen"
+	statscreen_dm = "DeathmatchStatusScreen"
+	statscreen_single = "RavenStatusScreen"
+	messageboxclass = "MessageBoxMenu"
+	helpmenuclass = "ReadThisMenu"
+	menudelegateclass = "DoomMenuDelegate"
+	normforwardmove = 0x19, 0x32
+	normsidemove = 0x18, 0x28
 /*
 	armoricons = "armh04", 0.1, "armh04"
-
-	cursorpic = "huwcurs"
-	pausesign = "paused"
 	menubackbutton = "M_BACK"
-
 	maparrow = "graphics/MapArrow.txt"
-
 	borderflat = "textures/cncr_grn.jpg"
-
 	defaultconversationmenuclass = "HUWConversationMenu"
 	MessageboxClass = "ClassicMessageBox"
 	statusbarclass = "HUWStatusBar"
-
 	ForceKillScripts = true //needed for Droplets - ozy81
 
 	AddEventHandlers = 

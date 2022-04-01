@@ -1,0 +1,20 @@
+////////////
+//SWITCHES//
+////////////
+
+UWBUTTNS	BUTTON
+UWSWITCS	SWITCH
+UWCHAINS	LEVER
+
+////////
+//SEQS//
+////////
+
+uw/metal1	UWCLOS_M
+uw/culls1	UWCLOS_P //not present yet
+uw/stone1	UWCLOS_S
+uw/wood1	UWCLOS_W
+uw/metal2		UWOPEN_M
+uw/culls2		UWOPEN_P //not present yet
+uw/stone2		UWOPEN_S
+uw/wood2		UWOPEN_W

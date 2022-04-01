@@ -1,0 +1,76 @@
+///////////
+// DOORS //
+///////////
+
+//=============================================//
+:SwingDoor_Wood_Open
+   play	uw/wood2
+   nostopcutoff
+end
+
+:SwingDoor_Wood_Close
+   play	uw/wood1
+   nostopcutoff
+end
+
+[SwingDoor_Wood
+   DOOR      10
+   0      SwingDoor_Wood_Open
+   1      SwingDoor_Wood_Close
+   2      SwingDoor_Wood_Open
+   3      SwingDoor_Wood_Close
+]
+//=============================================//
+:SwingDoor_Metal_Open
+   play	uw/metal2
+   nostopcutoff
+end
+
+:SwingDoor_Metal_Close
+   play	uw/metal1
+   nostopcutoff
+end
+
+[SwingDoor_Metal
+   DOOR      11
+   0      SwingDoor_Metal_Open
+   1      SwingDoor_Metal_Close
+   2      SwingDoor_Metal_Open
+   3      SwingDoor_Metal_Close
+]
+//=============================================//
+:SwingDoor_Stone_Open
+   play	uw/stone2
+   nostopcutoff
+end
+
+:SwingDoor_Stone_Close
+   play	uw/stone1
+   nostopcutoff
+end
+
+[SwingDoor_Stone
+   DOOR      12
+   0      SwingDoor_Stone_Open
+   1      SwingDoor_Stone_Close
+   2      SwingDoor_Stone_Open
+   3      SwingDoor_Stone_Close
+]
+//=============================================//
+:SwingDoor_Portcullis_Open
+   play	uw/culls2
+   nostopcutoff
+end
+
+:SwingDoor_Portcullis_Close
+   play	uw/culls1
+   nostopcutoff
+end
+
+[SwingDoor_Portcullis
+   DOOR      13
+   0      SwingDoor_Portcullis_Open
+   1      SwingDoor_Portcullis_Close
+   2      SwingDoor_Portcullis_Open
+   3      SwingDoor_Portcullis_Close
+]
