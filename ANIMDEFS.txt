@@ -864,3 +864,65 @@ texture "textures/intro/uw_000.png"
 	pic "textures/intro/uw_792.png" tics 8
 	pic "textures/intro/uw_793.png" tics 8
 	pic "textures/intro/uw_794.png" tics 64
+
+texture "graphics/death/dth_001.png"
+	pic "graphics/death/dth_001.png" tics 12
+	pic "graphics/death/dth_002.png" tics 12
+	pic "graphics/death/dth_003.png" tics 12
+	pic "graphics/death/dth_004.png" tics 12
+	pic "graphics/death/dth_005.png" tics 12
+	pic "graphics/death/dth_006.png" tics 12
+	pic "graphics/death/dth_007.png" tics 12
+	pic "graphics/death/dth_008.png" tics 12
+	pic "graphics/death/dth_009.png" tics 12
+	pic "graphics/death/dth_010.png" tics 12
+	pic "graphics/death/dth_011.png" tics 12
+	pic "graphics/death/dth_012.png" tics 12
+	pic "graphics/death/dth_013.png" tics 12
+	pic "graphics/death/dth_014.png" tics 12
+	pic "graphics/death/dth_015.png" tics 12
+	pic "graphics/death/dth_016.png" tics 12
+	pic "graphics/death/dth_017.png" tics 12
+	pic "graphics/death/dth_018.png" tics 12
+	pic "graphics/death/dth_019.png" tics 12
+	pic "graphics/death/dth_020.png" tics 12
+	pic "graphics/death/dth_021.png" tics 12
+	pic "graphics/death/dth_022.png" tics 12
+	pic "graphics/death/dth_023.png" tics 12
+	pic "graphics/death/dth_024.png" tics 12
+	pic "graphics/death/dth_025.png" tics 12
+	pic "graphics/death/dth_026.png" tics 12
+	pic "graphics/death/dth_027.png" tics 12
+	pic "graphics/death/dth_028.png" tics 12
+	pic "graphics/death/dth_029.png" tics 12
+	pic "graphics/death/dth_030.png" tics 12
+	pic "graphics/death/dth_031.png" tics 12
+	pic "graphics/death/dth_032.png" tics 12
+	pic "graphics/death/dth_033.png" tics 12
+	pic "graphics/death/dth_034.png" tics 12
+	pic "graphics/death/dth_035.png" tics 12
+	pic "graphics/death/dth_036.png" tics 12
+	pic "graphics/death/dth_037.png" tics 12
+	pic "graphics/death/dth_038.png" tics 12
+	pic "graphics/death/dth_039.png" tics 12
+	pic "graphics/death/dth_040.png" tics 12
+	pic "graphics/death/dth_041.png" tics 12
+	pic "graphics/death/dth_042.png" tics 12
+	pic "graphics/death/dth_043.png" tics 12
+	pic "graphics/death/dth_044.png" tics 12
+	pic "graphics/death/dth_045.png" tics 12
+	pic "graphics/death/dth_046.png" tics 12
+	pic "graphics/death/dth_047.png" tics 12
+	pic "graphics/death/dth_048.png" tics 12
+	pic "graphics/death/dth_049.png" tics 12
+	pic "graphics/death/dth_050.png" tics 12
+	pic "graphics/death/dth_051.png" tics 12
+	pic "graphics/death/dth_052.png" tics 12
+	pic "graphics/death/dth_053.png" tics 12
+	pic "graphics/death/dth_054.png" tics 12
+	pic "graphics/death/dth_055.png" tics 12
+	pic "graphics/death/dth_056.png" tics 12
+	pic "graphics/death/dth_057.png" tics 12
+	pic "graphics/death/dth_058.png" tics 12
+	pic "graphics/death/dth_059.png" tics 12
+	pic "graphics/death/dth_060.png" tics 12

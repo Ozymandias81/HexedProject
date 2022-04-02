@@ -56,6 +56,7 @@ script "30Health" ENTER
 
 		Delay(1);
 	}
+	
 }
 
 //death script
@@ -81,7 +82,7 @@ script "OhNoes!" DEATH
 		}
 	}
 
-	SetFont("youdied");
+	SetFont("death");
 	HudMessage(s:"A"; HUDMSG_FADEINOUT | HUDMSG_NOWRAP | HUDMSG_LAYER_OVERHUD, -1001, CR_UNTRANSLATED, 160.0, 120.0, 999999.0, 3.0, 1.0);
 
 	// [ZK] Delay 1 tic instead of 35

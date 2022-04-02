@@ -1,3 +1,23 @@
+LISTMENU "MainMenu"
+{
+	IfGame(Hexen)
+	{
+		StaticPatch 88, 0, "M_HTIC"
+		StaticPatch 37, 80, "FBULB0"
+		StaticPatch 278, 80, "FBULA0"
+		Position 110, 56
+	}
+
+	IfGame(Heretic, Hexen)
+	{
+		PatchItem "HUWGAME", "n", "PlayerclassMenu"
+		PatchItem "HUWOPTS","o", "OptionsMenu", 0
+		PatchItem "HUWSAVE", "g", "GameFilesMenu", 0
+		PatchItem "HUWINFO", "i", "ReadThisMenu", 0
+		PatchItem "HUWQUIT", "q", "QuitMenu", 0
+	}
+}
+
 AddOptionMenu "OptionsMenu"
 {
 	StaticText "$MN_OPZHUW"
