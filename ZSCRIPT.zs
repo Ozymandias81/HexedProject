@@ -39,15 +39,17 @@ class SimpleActor : Actor
 }
 
 //MAIN
-#include "zscript/avatar.zs"		//player
-#include "zscript/base.zs"
+#include "zscript/avatar.zs"			//player
+#include "zscript/base.zs"				//core
 
-#include "zscript/tests.zs"			//dumb stuff
+#include "zscript/tests.zs"				//dumb stuff
 
-#include "zscript/sfx/heateffect.zs"
-#include "zscript/sfx/smoke.zs"
-#include "zscript/sfx/splashes.zs"
-#include "zscript/sfx/underwater.zs"
+#include "zscript/sfx/heateffect.zs" 	//shaders & sfx
+#include "zscript/sfx/smoke.zs"			//shaders & sfx
+#include "zscript/sfx/splashes.zs"		//shaders & sfx
+#include "zscript/sfx/underwater.zs"	//shaders & sfx
+
+#include "zscript/inventory/torches.zs"	//inventory
 
 //FOES
 /*
