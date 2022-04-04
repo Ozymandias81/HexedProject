@@ -150,3 +150,63 @@ FlickerLight2 LANT03
 	Offset 0 64 0
 	Attenuate 1
 }
+
+FlickerLight2 LANT04
+{
+	Color 1.00 0.69 0.48
+	Size 212
+	SecondarySize 187
+	Interval 0.005
+	Offset 0 64 0
+	Attenuate 1
+}
+
+Flickerlight2 LANT05
+{
+	Color 0.90 0.59 0.38
+	Size 212
+	SecondarySize 167
+	Interval 0.005
+	Offset 0 64 0
+	Attenuate 1
+}
+
+FlickerLight2 LANT06
+{
+	Color 0.80 0.49 0.28
+	Size 212
+	SecondarySize 162
+	Interval 0.005
+	Offset 0 64 0
+	Attenuate 1
+}
+
+FlickerLight2 LANT07
+{
+	Color 1.00 0.69 0.48
+	Size 106
+	SecondarySize 93
+	Interval 0.005
+	Offset 0 64 0
+	Attenuate 1
+}
+
+Flickerlight2 LANT08
+{
+	Color 0.90 0.59 0.38
+	Size 106
+	SecondarySize 83
+	Interval 0.005
+	Offset 0 64 0
+	Attenuate 1
+}
+
+FlickerLight2 LANT09
+{
+	Color 0.80 0.49 0.28
+	Size 106
+	SecondarySize 81
+	Interval 0.005
+	Offset 0 64 0
+	Attenuate 1
+}

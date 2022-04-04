@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-* Hexed Underworld by Ozymandias81 *
+==> HEXED UNDERWORLD BY OZYMANDIAS81 <==
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-DESCRIPTION:
+# DESCRIPTION:
 
 This project would be a sort of cross-over TC between all the piece-of-art things
 from "ULTIMA UNDERWORLD: THE STYGIAN ABYSS" (mostly) and Hexen, and inspired to
@@ -30,7 +30,7 @@ WebSites + "www.reconstruction.voyd.net".
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-CREDITS:
+## CREDITS:
 
 Ultima Underworld: The Stygian Abyss by Blue Sky Productions - 1992
 UGCK: The UW Game Construction Kit by Kasper Fauerby - 2004
@@ -41,7 +41,7 @@ and a special thank to Stephen Clark for its beautiful "Serpent: Resurrection"
 project which originally inspired me to do this amazing TC back in 2016.
 --------------------------------------------------------------------------------
 
-# EDITORS USED:
+### EDITORS USED:
 - 7Zip : https://www.7-zip.org
 - Audacity : https://www.audacityteam.org
 - Bulk Rename Utility : https://www.bulkrenameutility.co.uk/Download.php
@@ -54,8 +54,8 @@ project which originally inspired me to do this amazing TC back in 2016.
 - Notepad++ : https://notepad-plus-plus.org
 - Slade3 : https://github.com/sirjuddington/SLADE/releases
 
-## KNOWN PROBLEMS/LIMITS/BUGS:
+#### KNOWN PROBLEMS/LIMITS/BUGS:
 TO ADD
 
-### LICENSE:
+##### LICENSE:
 THIS REPOSITORY IS FOR DEVELOPMENT AND TESTING PURPOSES. CONTRIBUTIONS ARE WELCOME, BUT YOU ARE **NOT ALLOWED** TO USE ANY UN-RELEASED MATERIAL FOR YOUR OWN PROJECTS WITHOUT OUR PERMISSION!

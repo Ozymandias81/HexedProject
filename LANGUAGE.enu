@@ -23,6 +23,18 @@ MN_OPNONE = "None";
 MN_OPNORM = "Normal";
 MN_OPZHUW = "PLEASE CONFIGURE THESE OPTIONS BEFORE PLAYING!";
 
+//Tags
+UWTAGCAND = "Candle";
+UWTAGLANT = "Lantern";
+UWTAGOILT = "Oil Flask";
+UWTAGTORC = "Torch";
+
+//Inventory
+UWCANPICK = "A Candle.";
+UWLANPICK = "Found a Lantern. Requires Oil Flask.";
+UWOILPICK = "Found an Oil Flask.";
+UWTORPICK = "An unused Torch.";
+
 //Taken from Sir Robin UW1 language file, actors names
 UWSTRING_7_17="Corby";
 UWSTRING_7_18="Shak";

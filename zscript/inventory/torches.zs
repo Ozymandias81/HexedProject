@@ -22,41 +22,9 @@
 
 //===========================================================================
 //
-// Torch
+// Base Classes
 //
 //===========================================================================
-
-class UWLanternOil : Inventory
-{
-	Default
-	{
-		Inventory.Amount 1;
-		Inventory.MaxAmount 12000; //Near 5 mins maximum - ozy81
-	}
-}
-
-class UWOilPickup : CustomInventory
-{
-	Default
-	{
-		//$Category HexedUW/Inventory
-		//$Title Lantern Oil
-		Scale 0.35;
-		-INVENTORY.INVBAR
-		Inventory.MaxAmount 12; //1000x12=12000
-		Inventory.PickupMessage "$OILPICK";
-		Inventory.PickupSound "misc/ammo_pkup";
-	}
-	States
-	{
-	Spawn:
-		LANT C -1;
-		Loop;
-	Pickup:
-		TNT1 A 0 A_GiveInventory("UWLanternOil", 1000);
-		Stop;
-	}
-}
 
 class PoweredInventory : Inventory
 {
@@ -125,6 +93,279 @@ class PoweredInventory : Inventory
 	}
 }
 
+//===========================================================================
+//
+// Torch & Candle
+//
+//===========================================================================
+
+class UWFlammable : Inventory
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 12000; //Near 5 mins maximum - ozy81
+	}
+}
+
+class UWFlammable2 : UWFlammable
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 6000; //Near 2,5 mins maximum - ozy81
+	}
+}
+
+class UWFlammable3 : UWFlammable
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 8000; //Near 3 mins maximum - ozy81
+	}
+}
+
+class UWTorchPickup : PoweredInventory
+{
+	int ticcount;
+
+	Default
+	{
+		//$Category HexedUW/Inventory
+		//$Title Useable Torch
+		//$Color 6
+		Scale 0.45;
+		Tag "$UWTAGTORC";
+		Inventory.Icon "UWTOB0";
+		Inventory.PickupMessage "$UWTORPICK";
+		Inventory.MaxAmount 1;
+		Inventory.PickupSound "misc/gadget_pickup";
+		+INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		PoweredInventory.Fuel "UWFlammable";
+		PoweredInventory.FuelGiveAmt 1000;
+	}
+
+	States
+	{
+		Spawn:
+			UWTO A -1;
+			Stop;
+	}
+
+	override void Tick()
+	{
+		if (owner)
+		{
+			if (active)
+			{
+				if (owner.waterlevel >= 3) // Extinguish if the player goes underwater
+				{
+					A_StartSound("flamer/steam", CHAN_AUTO, 0, Random(10, 25));
+					active = false;
+				}
+				else
+				{
+					if (ticcount > 4) { owner.A_AttachLightDef("TorchFlicker", "LANT04"); }
+					else if (ticcount > 0) { owner.A_AttachLightDef("TorchFlicker", "LANT05"); }
+					else { owner.A_AttachLightDef("TorchFlicker", "LANT06"); }
+
+					if (ticcount) { ticcount = max(0, ticcount - 1); }
+				}
+			}
+			else
+			{
+				owner.A_RemoveLight("TorchFlicker");
+			}
+		}
+
+		if (IsFrozen()) { return; }
+
+		Super.Tick();
+	}
+
+	override bool Use(bool pickup)
+	{
+		bool ret = Super.Use(pickup);
+		if (active) { ticcount = 8; }
+		return ret;
+	}
+}
+
+class UWCandle1Pickup : PoweredInventory
+{
+	int ticcount;
+
+	Default
+	{
+		//$Category HexedUW/Inventory
+		//$Title Useable Candle (normal)
+		//$Color 6
+		Scale 0.45;
+		Tag "$UWTAGCAND";
+		Inventory.Icon "UWCNB0";
+		Inventory.PickupMessage "$UWCANPICK";
+		Inventory.MaxAmount 1;
+		Inventory.PickupSound "misc/gadget_pickup";
+		+INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		PoweredInventory.Fuel "UWFlammable2";
+		PoweredInventory.FuelGiveAmt 1000;
+	}
+
+	States
+	{
+		Spawn:
+			UWCN A -1;
+			Stop;
+	}
+
+	override void Tick()
+	{
+		if (owner)
+		{
+			if (active)
+			{
+				if (owner.waterlevel >= 3) // Extinguish if the player goes underwater
+				{
+					A_StartSound("flamer/steam", CHAN_AUTO, 0, Random(10, 15));
+					active = false;
+				}
+				else
+				{
+					if (ticcount > 4) { owner.A_AttachLightDef("CandleFlicker", "LANT07"); }
+					else if (ticcount > 0) { owner.A_AttachLightDef("CandleFlicker", "LANT08"); }
+					else { owner.A_AttachLightDef("CandleFlicker", "LANT09"); }
+
+					if (ticcount) { ticcount = max(0, ticcount - 1); }
+				}
+			}
+			else
+			{
+				owner.A_RemoveLight("CandleFlicker");
+			}
+		}
+
+		if (IsFrozen()) { return; }
+
+		Super.Tick();
+	}
+
+	override bool Use(bool pickup)
+	{
+		bool ret = Super.Use(pickup);
+		if (active) { ticcount = 8; }
+		return ret;
+	}
+}
+
+class UWCandle2Pickup : PoweredInventory
+{
+	int ticcount;
+
+	Default
+	{
+		//$Category HexedUW/Inventory
+		//$Title Useable Candle (big)
+		//$Color 6
+		Scale 0.45;
+		Tag "$UWTAGCAND";
+		Inventory.Icon "UWCND0";
+		Inventory.PickupMessage "$UWCANPICK";
+		Inventory.MaxAmount 1;
+		Inventory.PickupSound "misc/gadget_pickup";
+		+INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		PoweredInventory.Fuel "UWFlammable3";
+		PoweredInventory.FuelGiveAmt 1000;
+	}
+
+	States
+	{
+		Spawn:
+			UWCN C -1;
+			Stop;
+	}
+
+	override void Tick()
+	{
+		if (owner)
+		{
+			if (active)
+			{
+				if (owner.waterlevel >= 3) // Extinguish if the player goes underwater
+				{
+					A_StartSound("flamer/steam", CHAN_AUTO, 0, Random(10, 15));
+					active = false;
+				}
+				else
+				{
+					if (ticcount > 4) { owner.A_AttachLightDef("BigCandleFlicker", "LANT06"); }
+					else if (ticcount > 0) { owner.A_AttachLightDef("BigCandleFlicker", "LANT07"); }
+					else { owner.A_AttachLightDef("BigCandleFlicker", "LANT08"); }
+
+					if (ticcount) { ticcount = max(0, ticcount - 1); }
+				}
+			}
+			else
+			{
+				owner.A_RemoveLight("BigCandleFlicker");
+			}
+		}
+
+		if (IsFrozen()) { return; }
+
+		Super.Tick();
+	}
+
+	override bool Use(bool pickup)
+	{
+		bool ret = Super.Use(pickup);
+		if (active) { ticcount = 8; }
+		return ret;
+	}
+}
+
+//===========================================================================
+//
+// Lantern
+//
+//===========================================================================
+
+class UWLanternOil : Inventory
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 24000; //Near 10 mins maximum - ozy81
+	}
+}
+
+class UWOilPickup : CustomInventory
+{
+	Default
+	{
+		//$Category HexedUW/Inventory
+		//$Title Lantern Oil
+		Tag "$UWTAGOILT";
+		Scale 0.35;
+		-INVENTORY.INVBAR
+		Inventory.MaxAmount 24; //1000x24=24000
+		Inventory.PickupMessage "$UWOILPICK";
+		Inventory.PickupSound "misc/ammo_pkup";
+	}
+	States
+	{
+	Spawn:
+		UWLT C -1;
+		Loop;
+	Pickup:
+		TNT1 A 0 A_GiveInventory("UWLanternOil", 1000);
+		Stop;
+	}
+}
+
 class UWLanternPickup : PoweredInventory
 {
 	int ticcount;
@@ -135,9 +376,9 @@ class UWLanternPickup : PoweredInventory
 		//$Title Useable Lantern (requires Oil)
 		//$Color 6
 		Scale 0.45;
-		Tag "$TAGLANTR";
-		Inventory.Icon "LANTB0";
-		Inventory.PickupMessage "$LANTERN";
+		Tag "$UWTAGLANT";
+		Inventory.Icon "UWLTB0";
+		Inventory.PickupMessage "$UWLANPICK";
 		Inventory.MaxAmount 1;
 		Inventory.PickupSound "misc/gadget_pickup";
 		+INVENTORY.INVBAR
@@ -149,7 +390,7 @@ class UWLanternPickup : PoweredInventory
 	States
 	{
 		Spawn:
-			LANT A -1;
+			UWLT A -1;
 			Stop;
 	}
 
@@ -187,9 +428,7 @@ class UWLanternPickup : PoweredInventory
 	override bool Use(bool pickup)
 	{
 		bool ret = Super.Use(pickup);
-
 		if (active) { ticcount = 8; }
-
 		return ret;
 	}
 }
