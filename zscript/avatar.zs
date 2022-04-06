@@ -20,7 +20,7 @@
  * SOFTWARE.
 */
 
-class AvatarPlayer : PlayerPawn //atm inherits Mage, I might consider to include modified "melee" based variants of Hexen classes as 2-3-4 choice
+class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based variants of Hexen classes as 2-3-4 choice, should replace MagePlayer
 {
 	Default
 	{
@@ -44,16 +44,16 @@ class AvatarPlayer : PlayerPawn //atm inherits Mage, I might consider to include
 		Player.InvulnerabilityMode "Reflective";
 		Player.HealRadiusType "Mana";
 		Player.Hexenarmor 5, 5, 15, 10, 25;
-		Player.StartItem "MWeapWand";
+		Player.StartItem "UWWeapFist";
 		Player.ForwardMove 0.88, 0.92;
 		Player.SideMove 0.875, 0.925;
 		Player.Portrait "P_MWALK1";
 		//Ranged weapons should work like ProximityGrenades in BoA, instant damage as they hit targets - no conditions for weaps probably
-		Player.WeaponSlot 1, "MWeapWand"; //Fists
-		Player.WeaponSlot 2, "MWeapFrost"; //Dagger & Swords
-		Player.WeaponSlot 3, "MWeapLightning";	//Axes
-		Player.WeaponSlot 4, "MWeapBloodscourge"; //Maces
-		Player.FlechetteType "ArtiPoisonBag2";	
+		Player.WeaponSlot 1, "UWWeapFist"; 			//Fists & Rocks
+		Player.WeaponSlot 2, "UWWeapAxe"; 			//Axes & Slings
+		Player.WeaponSlot 3, "UWWeapMace";			//Maces & Bows
+		Player.WeaponSlot 4, "UWWeapSword"; 		//Swords (D/S) & Wands
+		Player.FlechetteType "ArtiPoisonBag2";		//?
 		Player.ColorRange 146, 163;
 		Player.Colorset		0, "$TXT_COLOR_BLUE",		146, 163,    161;
 		Player.ColorsetFile 1, "$TXT_COLOR_RED",		"TRANTBL7",  0xB3;

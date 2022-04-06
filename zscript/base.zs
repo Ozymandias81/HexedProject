@@ -30,3 +30,13 @@ Class CutsceneEnabled : Inventory
 		Stop;
 	}
 }
+
+//Defining standalone weapons for Avatar
+class AvatarWeapon : Weapon
+{
+	Default
+	{
+		Weapon.Kickback 150;
+		//Inventory.ForbiddenTo FighterPlayer, ClericPlayer, MagePlayer;
+	}
+}

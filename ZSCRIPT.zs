@@ -42,14 +42,24 @@ class SimpleActor : Actor
 #include "zscript/avatar.zs"			//player
 #include "zscript/base.zs"				//core
 
+//SFX
+#include "zscript/sfx/heateffect.zs"
+#include "zscript/sfx/smoke.zs"
+#include "zscript/sfx/splashes.zs"
+#include "zscript/sfx/underwater.zs"
+
+//INVENTORY
+#include "zscript/inventory/torches.zs"
+
+//WEAPONS
+#include "zscript/weapons/axes.zs"
+#include "zscript/weapons/fists.zs"
+#include "zscript/weapons/maces.zs"
+#include "zscript/weapons/swords.zs"
+//#include "zscript/weapons/others.zs"
+
+//DELETE
 #include "zscript/tests.zs"				//dumb stuff
-
-#include "zscript/sfx/heateffect.zs" 	//shaders & sfx
-#include "zscript/sfx/smoke.zs"			//shaders & sfx
-#include "zscript/sfx/splashes.zs"		//shaders & sfx
-#include "zscript/sfx/underwater.zs"	//shaders & sfx
-
-#include "zscript/inventory/torches.zs"	//inventory
 
 //FOES
 /*
