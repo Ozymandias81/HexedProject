@@ -62,8 +62,9 @@ class SimpleActor : Actor
 #include "zscript/tests.zs"				//dumb stuff
 
 //FOES
-/*
 #include "zscript/critters/bats.zs"
+
+/*
 #include "zscript/critters/demon.zs"
 #include "zscript/critters/dwarves.zs"
 #include "zscript/critters/elementals.zs"
