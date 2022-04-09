@@ -27,7 +27,7 @@ SHADERS:
 AFADoomer, Talon1024, Ozymandias81
 
 TEXTURES:
-Blue Sky, Origin, Ozymandias81
+Blue Sky, Origin, Ozymandias81 (Custom, UWDR_OZ)
 
 ZSCRIPT:
 Sir Robin, AFADoomer, Talon1024, Tormentor667, Ozymandias81

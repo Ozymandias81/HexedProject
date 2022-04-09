@@ -22,3 +22,11 @@ Model HUW_Rock1
 	Scale 1.2 1.2 1.2
 	FrameIndex MDLS A 0 0
 }
+
+Model HUW_Table1
+{
+	Path "models/"
+	Model 0 "uw2table.md3"
+	Scale 0.7 0.7 0.7
+	FrameIndex MDLS A 0 0
+}

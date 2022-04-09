@@ -44,7 +44,7 @@ class HUWBatBase : Actor
 		HUWBatBase.MaxChaseTime 48;
 	}
 
-	States //these states shouldn't have shadows --Ozy81
+	States
 	{
 		Roost:
 			"####" K Random(35, 350); // 'Sleep' on roost for 1-10 seconds

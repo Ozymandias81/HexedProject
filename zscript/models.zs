@@ -48,6 +48,28 @@ Class HUW_Rock1 : Actor
 		Radius 48;
 		Height 48;
 		+MOVEWITHSECTOR
+		+SHOOTABLE
+		+SOLID
+	}
+	
+	States
+	{
+	Spawn:
+		MDLS A -1;
+		Stop;
+	}
+}
+
+Class HUW_Table1 : Actor
+{
+	Default
+	{
+		//$Category HexedUW/Props
+		//$Title Wooden Table
+		Radius 28;
+		Height 36;
+		+CANPASS
+		+SHOOTABLE
 		+SOLID
 	}
 	

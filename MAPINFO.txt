@@ -202,6 +202,7 @@ DoomEdNums
 	16005 = UWCandle2Pickup
 	20340 = HUW_Rock1
 	20343 = HUW_Ankh
+	21000 = HUW_Table1
 	32029 = HeatEffectGiver
 	32030 = DarkSmokeSpawner
 }
