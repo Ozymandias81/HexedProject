@@ -6,3 +6,19 @@ Model HeatEffectGiver
 	Scale 4.0 4.0 4.0
 	FrameIndex MDLS A 0 0
 }
+
+Model HUW_Ankh
+{
+	Path "models/"
+	Model 0 "ankh.md3"
+	Scale 10.0 10.0 10.0
+	FrameIndex MDLS A 0 0
+}
+
+Model HUW_Rock1
+{
+	Path "models/"
+	Model 0 "rocks.md3"
+	Scale 1.2 1.2 1.2
+	FrameIndex MDLS A 0 0
+}

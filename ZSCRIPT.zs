@@ -41,6 +41,7 @@ class SimpleActor : Actor
 //MAIN
 #include "zscript/avatar.zs"			//player
 #include "zscript/base.zs"				//core
+#include "zscript/models.zs"
 
 //SFX
 #include "zscript/sfx/heateffect.zs"

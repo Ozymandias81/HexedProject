@@ -191,12 +191,17 @@ map HUWMAP00 lookup "HUWMAP00"
 
 DoomEdNums
 {
+	11000 = HUW_Bat1
+	11001 = HUW_Bat2
+	11002 = HUW_Bat3
 	16000 = PaganU8
 	16001 = UWLanternPickup
 	16002 = UWOilPickup
 	16003 = UWTorchPickup
 	16004 = UWCandle1Pickup
 	16005 = UWCandle2Pickup
+	20340 = HUW_Rock1
+	20343 = HUW_Ankh
 	32029 = HeatEffectGiver
 	32030 = DarkSmokeSpawner
 }
