@@ -64,6 +64,7 @@ class SimpleActor : Actor
 
 //FOES
 #include "zscript/critters/bats.zs"
+#include "zscript/critters/ghosts.zs"
 
 /*
 #include "zscript/critters/demon.zs"
@@ -72,7 +73,6 @@ class SimpleActor : Actor
 #include "zscript/critters/females_f.zs"
 #include "zscript/critters/females_w.zs"
 #include "zscript/critters/gazer.zs"
-#include "zscript/critters/ghosts.zs"
 #include "zscript/critters/ghouls.zs"
 #include "zscript/critters/golem.zs"
 #include "zscript/critters/graygobs.zs"
