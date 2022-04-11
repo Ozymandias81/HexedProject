@@ -198,6 +198,7 @@ DoomEdNums
 	11004 = HUW_Ghost2
 	11005 = HUW_Ghost3
 	11006 = HUW_Ghost4
+	11007 = HUW_Imp
 	16000 = PaganU8
 	16001 = UWLanternPickup
 	16002 = UWOilPickup

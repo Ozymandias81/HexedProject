@@ -101,7 +101,7 @@ class HUWGhostBase : Actor
 
 	override int DamageMobj(Actor inflictor, Actor source, int damage, Name mod, int flags, double angle)
 	{
-		if (bDormant && source && source.player) { bDormant = false; } // Wake up dormant bats that are shot by a player
+		if (bDormant && source && source.player) { bDormant = false; } // Wake up dormant ghosts that are shot by a player
 
 		return Super.DamageMobj(inflictor, source, damage, mod, flags, angle);
 	}
@@ -116,8 +116,8 @@ class HUW_Ghost1 : HUWGhostBase
 		Health 300;
 		Radius 16;
 		Height 32;
-		FloatSpeed 4;
-		Speed 5;
+		FloatSpeed 3;
+		Speed 2;
 		PainChance 64;
 		HitObituary "$UWGHOST1";
 	}
@@ -161,9 +161,7 @@ class HUW_Ghost2 : HUW_Ghost1
 	Default
 	{
 		//$Title Ghost (Purple)
-		Health 300;
-		FloatSpeed 4;
-		Speed 5;
+		Health 350;
 		HitObituary "$UWGHOST2";
 	}
 
@@ -208,7 +206,7 @@ class HUW_Ghost3 : HUW_Ghost1
 		//$Title Ghost (Red)
 		Health 300;
 		FloatSpeed 4;
-		Speed 5;
+		Speed 3;
 		HitObituary "$UWGHOST3";
 	}
 
@@ -251,9 +249,9 @@ class HUW_Ghost4 : HUW_Ghost1
 	Default
 	{
 		//$Title Ghost (White)
-		Health 300;
+		Health 350;
 		FloatSpeed 4;
-		Speed 5;
+		Speed 3;
 		HitObituary "$UWGHOST4";
 	}
 
