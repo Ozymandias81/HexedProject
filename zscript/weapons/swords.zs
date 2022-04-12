@@ -40,9 +40,44 @@ class UWWeapSword : AvatarWeapon
 		RSWR A 1 A_Lower;
 		Loop;
 	Ready:
-		RSWR A 1 A_WeaponReady;
+		RSWR A 1 A_WeaponReady; //UWSwordInit;
 		Loop;
 	Fire:
+		RSWR B 0 {
+					if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_BACK))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.BBWD"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_FORWARD))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.FFWD"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					return;
+				}
+		Goto Ready;
+	Fire.Left:
+		LSWR B 6 Offset (5, 40);
+		LSWR C 5 Offset (5, 40);
+		LSWR D 4 Offset (5, 40);
+		LSWR E 3 Offset (5, 40);
+		LSWR F 3 Offset (5, 40);
+		LSWR G 3 Offset (5, 40) A_UWSwordAttack;
+		LSWR H 3 Offset (5, 40);
+		LSWR H 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.Right:
 		RSWR B 6 Offset (5, 40);
 		RSWR C 5 Offset (5, 40);
 		RSWR D 4 Offset (5, 40);
@@ -51,6 +86,26 @@ class UWWeapSword : AvatarWeapon
 		RSWR G 3 Offset (5, 40) A_UWSwordAttack;
 		RSWR H 3 Offset (5, 40);
 		RSWR H 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.FFWD:
+		RSWR I 6 Offset (5, 40);
+		RSWR J 5 Offset (5, 40);
+		RSWR K 4 Offset (5, 40);
+		RSWR L 3 Offset (5, 40);
+		RSWR M 3 Offset (5, 40);
+		RSWR N 3 Offset (5, 40) A_UWSwordAttack;
+		RSWR O 3 Offset (5, 40);
+		RSWR O 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.BBWD:
+		RSWR R 6 Offset (5, 40);
+		RSWR S 5 Offset (5, 40);
+		RSWR T 4 Offset (5, 40);
+		RSWR U 3 Offset (5, 40);
+		RSWR V 3 Offset (5, 40);
+		RSWR W 3 Offset (5, 40) A_UWSwordAttack;
+		RSWR X 3 Offset (5, 40);
+		RSWR X 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire2:
 		RSWR CB 5 Offset (5, 40);
@@ -62,6 +117,43 @@ class UWWeapSword : AvatarWeapon
 		RSWR A 2 Offset (65, 100);
 		RSWR A 8 Offset (0, 150);
 		Goto Ready;
+	}
+	
+	//============================================================================
+	//
+	// UWSwordInit
+	//
+	// Check if players uses any kind of attack with distinct states
+	//
+	//============================================================================
+	
+	action void A_UWSwordInit() //int flags = 0
+	{
+		//int buttons = GetPlayerInput(-1, MODINPUT_BUTTONS);
+		
+		if (!player) return;
+		
+		//DoReadyWeaponToSwitch(player, !(flags & WRF_NoSwitch));
+		//if ((flags & WRF_NoFire) != WRF_NoFire) DoReadyWeaponToFire(player.mo, !(flags & WRF_NoPrimary), !(flags & WRF_NoSecondary));
+		//if (!(flags & WRF_NoBob)) DoReadyWeaponToBob(player);
+
+		//player.WeaponState |= GetButtonStateFlags(flags);														
+		//DoReadyWeaponDisableSwitch(player, flags & WRF_DisableSwitch);
+		
+		if (player.cmd.buttons & BT_FORWARD)
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("FireFFWD"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+		}
+		
+		else if (player.cmd.buttons & BT_MOVELEFT)
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("FireLeft"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+		}
+		
+		A_WeaponReady();
+		
 	}
 	
 	//============================================================================

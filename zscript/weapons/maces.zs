@@ -43,6 +43,41 @@ class UWWeapMace : AvatarWeapon
 		RMAC A 1 A_WeaponReady;
 		Loop;
 	Fire:
+		RMAC A 0 {
+					if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_BACK))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.BBWD"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_FORWARD))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.FFWD"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					return;
+				}
+		Goto Ready;
+	Fire.Left:
+		LMAC B 6 Offset (5, 40);
+		LMAC C 5 Offset (5, 40);
+		LMAC D 4 Offset (5, 40);
+		LMAC E 3 Offset (5, 40);
+		LMAC F 3 Offset (5, 40);
+		LMAC G 3 Offset (5, 40) A_UWMaceAttack;
+		LMAC H 3 Offset (5, 40);
+		LMAC H 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.Right:
 		RMAC B 6 Offset (5, 40);
 		RMAC C 5 Offset (5, 40);
 		RMAC D 4 Offset (5, 40);
@@ -51,6 +86,26 @@ class UWWeapMace : AvatarWeapon
 		RMAC G 3 Offset (5, 40) A_UWMaceAttack;
 		RMAC H 3 Offset (5, 40);
 		RMAC H 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.FFWD:
+		RMAC L 6 Offset (5, 40);
+		RMAC M 5 Offset (5, 40);
+		RMAC N 4 Offset (5, 40);
+		RMAC O 3 Offset (5, 40);
+		RMAC P 3 Offset (5, 40);
+		RMAC Q 3 Offset (5, 40) A_UWMaceAttack;
+		RMAC R 3 Offset (5, 40);
+		RMAC R 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.BBWD:
+		RMAC T 6 Offset (5, 40);
+		RMAC U 5 Offset (5, 40);
+		RMAC V 4 Offset (5, 40);
+		RMAC W 3 Offset (5, 40);
+		RMAC X 3 Offset (5, 40);
+		RMAC Y 3 Offset (5, 40) A_UWMaceAttack;
+		RMAC Z 3 Offset (5, 40);
+		RMAC Z 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire2:
 		RMAC CB 5 Offset (5, 40);

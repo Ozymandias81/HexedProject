@@ -43,6 +43,41 @@ class UWWeapAxe : AvatarWeapon
 		RAXE A 1 A_WeaponReady;
 		Loop;
 	Fire:
+		RSWR B 0 {
+					if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_BACK))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.BBWD"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					else if((GetPlayerInput(INPUT_BUTTONS) & BT_FORWARD))
+					{
+						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.FFWD"));
+						A_StartSound ("*fistgrunt", CHAN_VOICE);
+					}
+					return;
+				}
+		Goto Ready;
+	Fire.Left:
+		LAXE B 6 Offset (5, 40);
+		LAXE C 5 Offset (5, 40);
+		LAXE D 4 Offset (5, 40);
+		LAXE E 3 Offset (5, 40);
+		LAXE F 3 Offset (5, 40);
+		LAXE G 3 Offset (5, 40) A_UWAxeAttack;
+		LAXE H 3 Offset (5, 40);
+		LAXE H 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.Right:
 		RAXE B 6 Offset (5, 40);
 		RAXE C 5 Offset (5, 40);
 		RAXE D 4 Offset (5, 40);
@@ -51,6 +86,26 @@ class UWWeapAxe : AvatarWeapon
 		RAXE G 3 Offset (5, 40) A_UWAxeAttack;
 		RAXE H 3 Offset (5, 40);
 		RAXE H 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.FFWD:
+		RAXE I 6 Offset (5, 40);
+		RAXE J 5 Offset (5, 40);
+		RAXE K 4 Offset (5, 40);
+		RAXE L 3 Offset (5, 40);
+		RAXE M 3 Offset (5, 40);
+		RAXE N 3 Offset (5, 40) A_UWAxeAttack;
+		RAXE O 3 Offset (5, 40);
+		RAXE O 6 Offset (5, 80) A_ReFire;
+		Goto Ready;
+	Fire.BBWD:
+		RAXE Q 6 Offset (5, 40);
+		RAXE R 5 Offset (5, 40);
+		RAXE S 4 Offset (5, 40);
+		RAXE T 3 Offset (5, 40);
+		RAXE U 3 Offset (5, 40);
+		RAXE V 3 Offset (5, 40) A_UWAxeAttack;
+		RAXE W 3 Offset (5, 40);
+		RAXE W 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire2:
 		RAXE CB 5 Offset (5, 40);
