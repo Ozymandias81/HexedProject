@@ -126,7 +126,7 @@ class UWFlammable3 : UWFlammable
 	}
 }
 
-class UWTorchPickup : PoweredInventory
+class HUW_TorchPickup : PoweredInventory
 {
 	int ticcount;
 
@@ -193,7 +193,7 @@ class UWTorchPickup : PoweredInventory
 	}
 }
 
-class UWCandle1Pickup : PoweredInventory
+class HUW_Candle1Pickup : PoweredInventory
 {
 	int ticcount;
 
@@ -260,7 +260,7 @@ class UWCandle1Pickup : PoweredInventory
 	}
 }
 
-class UWCandle2Pickup : PoweredInventory
+class HUW_Candle2Pickup : PoweredInventory
 {
 	int ticcount;
 
@@ -342,7 +342,7 @@ class UWLanternOil : Inventory
 	}
 }
 
-class UWOilPickup : CustomInventory
+class HUW_OilPickup : CustomInventory
 {
 	Default
 	{
@@ -366,7 +366,7 @@ class UWOilPickup : CustomInventory
 	}
 }
 
-class UWLanternPickup : PoweredInventory
+class HUW_LanternPickup : PoweredInventory
 {
 	int ticcount;
 

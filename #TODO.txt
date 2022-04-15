@@ -3,3 +3,4 @@ REMINDER:
 - Flammable objects can be turned on all together, this is not right
 - Adjust all weaps for left/right option
 - Remember to include 3 attacks for each weaps with existing frames and code properly their custom attacks as well
+- Add sounds for Mongbats and Ghosts

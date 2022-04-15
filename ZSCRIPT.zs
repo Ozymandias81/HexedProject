@@ -50,6 +50,7 @@ class SimpleActor : Actor
 #include "zscript/sfx/underwater.zs"
 
 //INVENTORY
+#include "zscript/inventory/sapling.zs"
 #include "zscript/inventory/torches.zs"
 
 //WEAPONS
