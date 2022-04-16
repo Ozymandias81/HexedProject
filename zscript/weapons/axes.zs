@@ -98,13 +98,13 @@ class UWWeapAxe : AvatarWeapon
 		RAXE O 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire.BBWD:
-		RAXE Q 6 Offset (5, 40);
-		RAXE R 5 Offset (5, 40);
-		RAXE S 4 Offset (5, 40);
+		RAXE P 6 Offset (5, 40);
+		RAXE Q 5 Offset (5, 40);
+		RAXE R 4 Offset (5, 40);
+		RAXE S 3 Offset (5, 40);
 		RAXE T 3 Offset (5, 40);
-		RAXE U 3 Offset (5, 40);
-		RAXE V 3 Offset (5, 40) A_UWAxeAttack;
-		RAXE W 3 Offset (5, 40);
+		RAXE U 3 Offset (5, 40) A_UWAxeAttack;
+		RAXE V 3 Offset (5, 40);
 		RAXE W 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire2:
@@ -117,54 +117,14 @@ class UWWeapAxe : AvatarWeapon
 		RAXE A 2 Offset (65, 100);
 		RAXE A 8 Offset (0, 150);
 		Goto Ready;
-	}
-	
-	//============================================================================
-	//
-	// TryPunch
-	//
-	// Returns true if an actor was punched, false if not.
-	//
-	//============================================================================
-
-	private action bool TryPunch(double angle, int damage, int power)
-	{
-		Class<Actor> pufftype;
-		FTranslatedLineTarget t;
-
-		double slope = AimLineAttack (angle, 2*DEFMELEERANGE, t, 0., ALF_CHECK3D);
-		if (t.linetarget != null)
-		{
-			if (++weaponspecial >= 3)
-			{
-				damage <<= 1;
-				power *= 3;
-				pufftype = "HammerPuff";
-			}
-			else
-			{
-				pufftype = "PunchPuff";
-			}
-			LineAttack (angle, 2*DEFMELEERANGE, slope, damage, 'Melee', pufftype, true, t);
-			if (t.linetarget != null)
-			{
-				// The mass threshold has been changed to CommanderKeen's value which has been used most often for 'unmovable' stuff.
-				if (t.linetarget.player != null || 
-					(t.linetarget.Mass < 10000000 && (t.linetarget.bIsMonster)))
-				{
-					if (!t.linetarget.bDontThrust)
-						t.linetarget.Thrust(power, t.attackAngleFromSource);
-				}
-				AdjustPlayerAngle(t);
-				return true;
-			}
-		}
-		return false;
+	Spawn:
+		UWAX A -1;
+		Stop;
 	}
 
 	//============================================================================
 	//
-	// A_FAxeAttack
+	// From A_FPunchAttack
 	//
 	//============================================================================
 
@@ -178,8 +138,8 @@ class UWWeapAxe : AvatarWeapon
 		int damage = random[FighterAtk](40, 55);
 		for (int i = 0; i < 16; i++)
 		{
-			if (TryPunch(angle + i*(45./16), damage, 2) ||
-				TryPunch(angle - i*(45./16), damage, 2))
+			if (UWPunch(angle + i*(45./16), damage, 2) ||
+				UWPunch(angle - i*(45./16), damage, 2))
 			{ // hit something
 				if (weaponspecial >= 3)
 				{

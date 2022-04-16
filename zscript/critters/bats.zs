@@ -192,7 +192,8 @@ class HUW_Bat1 : HUWBatBase
 		Speed 3.33333334;
 		PainChance 200;
 		Monster;
-		HitObituary "$UWBAT1";
+		Tag "$T_UWBAT1";
+		HitObituary "$HB_UWBAT1";
 		HUWBatBase.MaxChaseTime 350;
 	}
 
@@ -244,7 +245,8 @@ class HUW_Bat2 : HUW_Bat1
 		Health 150;
 		FloatSpeed 3.33333333;
 		Speed 4.33333334;
-		HitObituary "$UWBAT2";
+		Tag "$T_UWBAT2";
+		HitObituary "$HB_UWBAT2";
 		HUWBatBase.MaxChaseTime 700;
 	}
 
@@ -298,7 +300,8 @@ class HUW_Bat3 : HUW_Bat1
 		Speed 5.33333334;
 		PainChance 200;
 		Monster;
-		HitObituary "$UWBAT3";
+		Tag "$T_UWBAT3";
+		HitObituary "$HB_UWBAT3";
 		HUWBatBase.MaxChaseTime 1050;
 	}
 

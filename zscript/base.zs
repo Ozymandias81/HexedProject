@@ -37,6 +37,50 @@ class AvatarWeapon : Weapon
 	Default
 	{
 		Weapon.Kickback 150;
+		Scale 0.45;
 		//Inventory.ForbiddenTo FighterPlayer, ClericPlayer, MagePlayer;
+	}
+	
+	//============================================================================
+	//
+	// From Hexen's Fighter TryPunch
+	//
+	// Returns true if an actor was punched, false if not, adapt it for HUW
+	//
+	//============================================================================
+
+	action bool UWPunch(double angle, int damage, int power)
+	{
+		Class<Actor> pufftype;
+		FTranslatedLineTarget t;
+
+		double slope = AimLineAttack (angle, 2*DEFMELEERANGE, t, 0., ALF_CHECK3D);
+		if (t.linetarget != null)
+		{
+			if (++weaponspecial >= 3)
+			{
+				damage <<= 1;
+				power *= 3;
+				pufftype = "HammerPuff";
+			}
+			else
+			{
+				pufftype = "PunchPuff";
+			}
+			LineAttack (angle, 2*DEFMELEERANGE, slope, damage, 'Melee', pufftype, true, t);
+			if (t.linetarget != null)
+			{
+				// The mass threshold has been changed to CommanderKeen's value which has been used most often for 'unmovable' stuff.
+				if (t.linetarget.player != null || 
+					(t.linetarget.Mass < 10000000 && (t.linetarget.bIsMonster)))
+				{
+					if (!t.linetarget.bDontThrust)
+						t.linetarget.Thrust(power, t.attackAngleFromSource);
+				}
+				AdjustPlayerAngle(t);
+				return true;
+			}
+		}
+		return false;
 	}
 }

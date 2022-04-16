@@ -191,9 +191,6 @@ map HUWMAP00 lookup "HUWMAP00"
 
 DoomEdNums
 {
-	11000 = HUW_Bat1
-	11001 = HUW_Bat2
-	11002 = HUW_Bat3
 	11003 = HUW_Ghost1
 	11004 = HUW_Ghost2
 	11005 = HUW_Ghost3
@@ -205,6 +202,12 @@ DoomEdNums
 	16003 = HUW_TorchPickup
 	16004 = HUW_Candle1Pickup
 	16005 = HUW_Candle2Pickup
+	19000 = HUW_Bat2 //new
+	20000 = UWWeapAxe
+	20004 = UWWeapSword
+	20009 = UWWeapMace
+	20066 = HUW_Bat1
+	20073 = HUW_Bat3
 	20340 = HUW_Rock1
 	20343 = HUW_Ankh
 	20458 = HUW_SilverSapling

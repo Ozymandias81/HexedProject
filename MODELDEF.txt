@@ -19,7 +19,7 @@ Model HUW_Rock1
 {
 	Path "models/"
 	Model 0 "rocks.md3"
-	Scale 1.2 1.2 1.2
+	Scale 1.4 1.4 1.4
 	FrameIndex MDLS A 0 0
 }
 

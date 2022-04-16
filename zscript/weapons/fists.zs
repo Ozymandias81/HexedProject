@@ -82,49 +82,6 @@ class UWWeapFist : AvatarWeapon
 		RPCH E 10 Offset (0, 150);
 		Goto Ready;
 	}
-	
-	//============================================================================
-	//
-	// TryPunch
-	//
-	// Returns true if an actor was punched, false if not.
-	//
-	//============================================================================
-
-	private action bool TryPunch(double angle, int damage, int power)
-	{
-		Class<Actor> pufftype;
-		FTranslatedLineTarget t;
-
-		double slope = AimLineAttack (angle, 2*DEFMELEERANGE, t, 0., ALF_CHECK3D);
-		if (t.linetarget != null)
-		{
-			if (++weaponspecial >= 3)
-			{
-				damage <<= 1;
-				power *= 3;
-				pufftype = "HammerPuff";
-			}
-			else
-			{
-				pufftype = "PunchPuff";
-			}
-			LineAttack (angle, 2*DEFMELEERANGE, slope, damage, 'Melee', pufftype, true, t);
-			if (t.linetarget != null)
-			{
-				// The mass threshold has been changed to CommanderKeen's value which has been used most often for 'unmovable' stuff.
-				if (t.linetarget.player != null || 
-					(t.linetarget.Mass < 10000000 && (t.linetarget.bIsMonster)))
-				{
-					if (!t.linetarget.bDontThrust)
-						t.linetarget.Thrust(power, t.attackAngleFromSource);
-				}
-				AdjustPlayerAngle(t);
-				return true;
-			}
-		}
-		return false;
-	}
 
 	//============================================================================
 	//
@@ -142,8 +99,8 @@ class UWWeapFist : AvatarWeapon
 		int damage = random[FighterAtk](40, 55);
 		for (int i = 0; i < 16; i++)
 		{
-			if (TryPunch(angle + i*(45./16), damage, 2) ||
-				TryPunch(angle - i*(45./16), damage, 2))
+			if (UWPunch(angle + i*(45./16), damage, 2) ||
+				UWPunch(angle - i*(45./16), damage, 2))
 			{ // hit something
 				if (weaponspecial >= 3)
 				{

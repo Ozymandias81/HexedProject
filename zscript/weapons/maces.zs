@@ -88,24 +88,24 @@ class UWWeapMace : AvatarWeapon
 		RMAC H 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire.FFWD:
-		RMAC L 6 Offset (5, 40);
-		RMAC M 5 Offset (5, 40);
-		RMAC N 4 Offset (5, 40);
+		RMAC I 6 Offset (5, 40);
+		RMAC J 5 Offset (5, 40);
+		RMAC K 4 Offset (5, 40);
+		RMAC L 3 Offset (5, 40);
+		RMAC M 3 Offset (5, 40);
+		RMAC N 3 Offset (5, 40) A_UWMaceAttack;
 		RMAC O 3 Offset (5, 40);
-		RMAC P 3 Offset (5, 40);
-		RMAC Q 3 Offset (5, 40) A_UWMaceAttack;
-		RMAC R 3 Offset (5, 40);
-		RMAC R 6 Offset (5, 80) A_ReFire;
+		RMAC O 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire.BBWD:
-		RMAC T 6 Offset (5, 40);
-		RMAC U 5 Offset (5, 40);
-		RMAC V 4 Offset (5, 40);
-		RMAC W 3 Offset (5, 40);
-		RMAC X 3 Offset (5, 40);
-		RMAC Y 3 Offset (5, 40) A_UWMaceAttack;
-		RMAC Z 3 Offset (5, 40);
-		RMAC Z 6 Offset (5, 80) A_ReFire;
+		RMAC P 6 Offset (5, 40);
+		RMAC Q 5 Offset (5, 40);
+		RMAC R 4 Offset (5, 40);
+		RMAC S 3 Offset (5, 40);
+		RMAC T 3 Offset (5, 40);
+		RMAC U 3 Offset (5, 40) A_UWMaceAttack;
+		RMAC V 3 Offset (5, 40);
+		RMAC W 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
 	Fire2:
 		RMAC CB 5 Offset (5, 40);
@@ -117,54 +117,14 @@ class UWWeapMace : AvatarWeapon
 		RMAC A 2 Offset (65, 100);
 		RMAC A 8 Offset (0, 150);
 		Goto Ready;
-	}
-	
-	//============================================================================
-	//
-	// TryPunch
-	//
-	// Returns true if an actor was punched, false if not.
-	//
-	//============================================================================
-
-	private action bool TryPunch(double angle, int damage, int power)
-	{
-		Class<Actor> pufftype;
-		FTranslatedLineTarget t;
-
-		double slope = AimLineAttack (angle, 2*DEFMELEERANGE, t, 0., ALF_CHECK3D);
-		if (t.linetarget != null)
-		{
-			if (++weaponspecial >= 3)
-			{
-				damage <<= 1;
-				power *= 3;
-				pufftype = "HammerPuff";
-			}
-			else
-			{
-				pufftype = "PunchPuff";
-			}
-			LineAttack (angle, 2*DEFMELEERANGE, slope, damage, 'Melee', pufftype, true, t);
-			if (t.linetarget != null)
-			{
-				// The mass threshold has been changed to CommanderKeen's value which has been used most often for 'unmovable' stuff.
-				if (t.linetarget.player != null || 
-					(t.linetarget.Mass < 10000000 && (t.linetarget.bIsMonster)))
-				{
-					if (!t.linetarget.bDontThrust)
-						t.linetarget.Thrust(power, t.attackAngleFromSource);
-				}
-				AdjustPlayerAngle(t);
-				return true;
-			}
-		}
-		return false;
+	Spawn:
+		UWMC A -1;
+		Stop;
 	}
 
 	//============================================================================
 	//
-	// A_FMaceAttack
+	// From A_FPunchAttack
 	//
 	//============================================================================
 
@@ -178,8 +138,8 @@ class UWWeapMace : AvatarWeapon
 		int damage = random[FighterAtk](40, 55);
 		for (int i = 0; i < 16; i++)
 		{
-			if (TryPunch(angle + i*(45./16), damage, 2) ||
-				TryPunch(angle - i*(45./16), damage, 2))
+			if (UWPunch(angle + i*(45./16), damage, 2) ||
+				UWPunch(angle - i*(45./16), damage, 2))
 			{ // hit something
 				if (weaponspecial >= 3)
 				{
