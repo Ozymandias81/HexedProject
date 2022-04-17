@@ -47,6 +47,12 @@ UWBUTTNS	BUTTON
 UWSWITCS	SWITCH
 UWCHAINS	LEVER
 
+///////////////
+//INTERACTIVE//
+///////////////
+
+SFX/FlowLoop	LOWFLOW
+
 ////////
 //SEQS//
 ////////

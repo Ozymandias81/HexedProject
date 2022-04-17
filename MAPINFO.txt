@@ -210,6 +210,7 @@ DoomEdNums
 	20073 = HUW_Bat3
 	20340 = HUW_Rock1
 	20343 = HUW_Ankh
+	20457 = HUW_Fountain
 	20458 = HUW_SilverSapling
 	21000 = HUW_Table1
 	32029 = HeatEffectGiver

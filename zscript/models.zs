@@ -28,6 +28,10 @@ Class HUW_Ankh : Actor
 		//$Title Ankh
 		Radius 16;
 		Height 48;
+		+NOBLOOD
+		+NOBLOODDECALS
+		+NOTAUTOAIMED
+		+SHOOTABLE
 		+SOLID
 	}
 	
@@ -47,6 +51,9 @@ Class HUW_Rock1 : Actor
 		//$Title Large Boulder (Grey)
 		Radius 48;
 		Height 48;
+		+NOBLOOD
+		+NOBLOODDECALS
+		+NOTAUTOAIMED
 		+MOVEWITHSECTOR
 		+SHOOTABLE
 		+SOLID
@@ -69,6 +76,9 @@ Class HUW_Table1 : Actor
 		Radius 28;
 		Height 36;
 		+CANPASS
+		+NOBLOOD
+		+NOBLOODDECALS
+		+NOTAUTOAIMED
 		+SHOOTABLE
 		+SOLID
 	}
