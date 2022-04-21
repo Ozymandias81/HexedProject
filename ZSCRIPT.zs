@@ -68,12 +68,13 @@ class SimpleActor : Actor
 #include "zscript/critters/bats.zs"
 #include "zscript/critters/ghosts.zs"
 #include "zscript/critters/imps.zs"
+#include "zscript/critters/females_f.zs"
+#include "zscript/critters/males_f.zs"
 
 /*
 #include "zscript/critters/demon.zs"
 #include "zscript/critters/dwarves.zs"
 #include "zscript/critters/elementals.zs"
-#include "zscript/critters/females_f.zs"
 #include "zscript/critters/females_w.zs"
 #include "zscript/critters/gazer.zs"
 #include "zscript/critters/ghouls.zs"
@@ -83,7 +84,6 @@ class SimpleActor : Actor
 #include "zscript/critters/headless.zs"
 #include "zscript/critters/lizardmen.zs"
 #include "zscript/critters/lurker.zs"
-#include "zscript/critters/male_f.zs"
 #include "zscript/critters/male_w.zs"
 #include "zscript/critters/rats.zs"
 #include "zscript/critters/reaper.zs"

@@ -37,12 +37,13 @@ UWTORPICK = "An unused Torch.";
 
 //Enemies
 T_UWBAT1 = "A Cave Bat"
-T_UWBAT2 = "A Swamp Bat" //n
+T_UWBAT2 = "A Swamp Bat" //new
 T_UWBAT3 = "A Vampire Bat"
 
 //Obituaries
+OB_FEMFI1 = "";
 
-//Taken from Sir Robin UW1 language file, actors names
+//Tags - Taken from Sir Robin UW1 language file, actors names
 UWSTRING_7_17="Corby";
 UWSTRING_7_18="Shak";
 UWSTRING_7_19="Goldthirst";
