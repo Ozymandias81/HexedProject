@@ -20,10 +20,20 @@
  * SOFTWARE.
 */
 
+/*
+
+7,a_cudgel,mace,16,15,2,20,95,145,6,3,2
+8,a_light mace,mace,24,55,15,15,85,175,10,6,4
+9,a_mace,mace,32,90,25,9,75,190,16,8,5
+14,a_jeweled mace,mace,28,250,255,6,65,220,17,9,5
+
+*/
+
 class UWWeapMace : AvatarWeapon
 {
 	Default
 	{
+		//$Title Mace
 		+BLOODSPLATTER
 		+WEAPON.MELEEWEAPON
 		Obituary "$OB_UWMACE";
@@ -135,11 +145,11 @@ class UWWeapMace : AvatarWeapon
 			return;
 		}
 
-		int damage = random[FighterAtk](40, 55);
+		int damage = random[AvatarAtk](3, 6); //cudgel base
 		for (int i = 0; i < 16; i++)
 		{
-			if (UWPunch(angle + i*(45./16), damage, 2) ||
-				UWPunch(angle - i*(45./16), damage, 2))
+			if (UWMace(angle + i*(45./16), damage, 2) ||
+				UWMace(angle - i*(45./16), damage, 2))
 			{ // hit something
 				if (weaponspecial >= 3)
 				{

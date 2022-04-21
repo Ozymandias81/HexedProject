@@ -191,23 +191,24 @@ map HUWMAP00 lookup "HUWMAP00"
 
 DoomEdNums
 {
-	11003 = HUW_Ghost1
-	11004 = HUW_Ghost2
-	11005 = HUW_Ghost3
-	11006 = HUW_Ghost4
-	11007 = HUW_Imp
-	16000 = PaganU8
-	16001 = HUW_LanternPickup
-	16002 = HUW_OilPickup
-	16003 = HUW_TorchPickup
-	16004 = HUW_Candle1Pickup
-	16005 = HUW_Candle2Pickup
+	18000 = PaganU8
 	19000 = HUW_Bat2 //new
+	19001 = HUW_Ghost2 //new
+	19002 = HUW_Ghost3 //new
 	20000 = UWWeapAxe
 	20004 = UWWeapSword
 	20009 = UWWeapMace
 	20066 = HUW_Bat1
 	20073 = HUW_Bat3
+	20075 = HUW_Imp
+	20081 = HUW_Imp2 //mongbat
+	20100 = HUW_Ghost4
+	20101 = HUW_Ghost1
+	20144 = HUW_LanternPickup
+	20145 = HUW_TorchPickup
+	20146 = HUW_Candle1Pickup
+	20147 = HUW_Candle2Pickup //taper
+	20301 = HUW_OilPickup
 	20340 = HUW_Rock1
 	20343 = HUW_Ankh
 	20457 = HUW_Fountain

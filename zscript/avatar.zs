@@ -30,6 +30,7 @@ class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based var
 		Radius 16;
 		Height 64;
 		Speed 1;
+		Scale 0.65;
 		+NOSKIN
 		+NODAMAGETHRUST
 		+PLAYERPAWN.NOTHRUSTWHENINVUL
@@ -68,26 +69,26 @@ class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based var
 	States
 	{
 	Spawn:
-		MAGE A -1;
+		MAF3 H -1;
 		Stop;
 	See:
-		MAGE ABCD 4;
+		MAF3 ABCD 4;
 		Loop;
 	Missile:
 	Melee:
-		MAGE EF 8;
+		MAF3 MO 8;
 		Goto Spawn;
 	Pain:
-		MAGE G 4;
-		MAGE G 4 A_Pain;
+		MAF3 J 4;
+		MAF3 J 4 A_Pain;
 		Goto Spawn;
 	Death:
-		MAGE H 6;
-		MAGE I 6 A_PlayerScream;
-		MAGE JK 6;
-		MAGE L 6 A_NoBlocking;
-		MAGE M 6;
-		MAGE N -1;
+		MAF3 J 6;
+		MAF3 K 6 A_PlayerScream;
+		MAF3 LM 6;
+		MAGE N 6 A_NoBlocking;
+		MAF3 Q 6;
+		MAF3 R -1;
 		Stop;		
 	XDeath:
 		MAGE O 5 A_PlayerScream;

@@ -20,6 +20,8 @@
  * SOFTWARE.
 */
 
+// 15,a_fist,unarmed,0,0,255,15,90,140,4,2,3
+
 class UWWeapFist : AvatarWeapon
 {
 	Default
@@ -96,7 +98,7 @@ class UWWeapFist : AvatarWeapon
 			return;
 		}
 
-		int damage = random[FighterAtk](40, 55);
+		int damage = random[AvatarAtk](2, 4);
 		for (int i = 0; i < 16; i++)
 		{
 			if (UWPunch(angle + i*(45./16), damage, 2) ||

@@ -20,10 +20,20 @@
  * SOFTWARE.
 */
 
+/*
+
+0,a_hand axe,axe,24,20,10,25,90,160,4,6,2
+1,a_battle axe,axe,40,60,34,5,70,220,7,14,2
+2,an_axe,axe,32,100,25,13,80,190,6,10,8
+11,a_jeweled axe,axe,32,250,255,8,75,200,8,13,5
+
+*/
+
 class UWWeapAxe : AvatarWeapon
 {
 	Default
 	{
+		//$Title Axe
 		+BLOODSPLATTER
 		+WEAPON.MELEEWEAPON
 		Obituary "$OB_UWAXE";
@@ -135,11 +145,11 @@ class UWWeapAxe : AvatarWeapon
 			return;
 		}
 
-		int damage = random[FighterAtk](40, 55);
+		int damage = random[AvatarAtk](2, 6); //handaxe base
 		for (int i = 0; i < 16; i++)
 		{
-			if (UWPunch(angle + i*(45./16), damage, 2) ||
-				UWPunch(angle - i*(45./16), damage, 2))
+			if (UWAxe(angle + i*(45./16), damage, 2) ||
+				UWAxe(angle - i*(45./16), damage, 2))
 			{ // hit something
 				if (weaponspecial >= 3)
 				{

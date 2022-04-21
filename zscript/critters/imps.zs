@@ -1,6 +1,7 @@
 class HUW_Imp : HereticImp
 {
-	//bool extremecrash;
+	bool extremecrash;
+	int missilecount;
 
 	Default
 	{
@@ -26,7 +27,7 @@ class HUW_Imp : HereticImp
 		ActiveSound "himp/active";
 		Obituary "$OB_HUWIMP";
 		HitObituary "$HB_HUWIMP";
-		Tag "$FN_HERETICIMP";
+		Tag "Flying Imp";
 	}
 	
 	States
@@ -39,13 +40,14 @@ class HUW_Imp : HereticImp
 		Loop;
 	Melee:
 		UWIG IJ 6 A_FaceTarget;
-		UWIG F 6 A_CustomMeleeAttack(random[ImpMeAttack](5,12), "himp/attack", "himp/attack");
+		UWIG F 6 A_CustomMeleeAttack(random[ImpMsAttack](5,12), "himp/attack", "himp/attack");
 		UWIG L 4 A_FaceTarget;
 		Goto See;
 	Missile:
 		UWIG M 10 A_FaceTarget;
-		UWIG EFGH 6 A_ImpMsAttack;
-		UWIG M 6;
+		UWIG EF 6;
+		UWIG G 6 A_ImpMsAttack;
+		UWIG HM 6;
 		Goto Missile+2;
 	Pain:
 		UWIG M 3;
@@ -75,9 +77,7 @@ class HUW_Imp : HereticImp
 		UWDT G -1 A_SetScale(0.45);
 		Stop;
 	}
-	
-}
-/*
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_ImpMsAttack
@@ -92,7 +92,7 @@ class HUW_Imp : HereticImp
 			return;
 		}
 		A_SkullAttack(12);
-}
+	}
 
 	//----------------------------------------------------------------------------
 	//
@@ -154,75 +154,92 @@ class HUW_Imp : HereticImp
 		extremecrash = true;
 	}
 }
-		
-// Heretic imp chunk 1 ------------------------------------------------------
 
-class HereticImpChunk1 : Actor
+class HUW_Imp2 : HUW_Imp
 {
 	Default
 	{
-		Mass 5;
-		Radius 4;
-		+NOBLOCKMAP
-		+MOVEWITHSECTOR
+		//$Title Mongbat
+		Speed 12;
+		Painchance 144;
+		Obituary "$OB_HUWMON";
+		HitObituary "$HB_HUWMON";
+		Tag "Flying Mongbat";
 	}
+	
 	States
 	{
 	Spawn:
-		IMPX M 5;
-		IMPX NO 700;
+		UWIB ABCD 10 A_Look;
+		Loop;
+	See:
+		UWIB AABBCCDD 3 A_Chase;
+		Loop;
+	Melee:
+		UWIB IJ 6 A_FaceTarget;
+		UWIB F 6 A_CustomMeleeAttack(random[ImpMsAttack](5,12), "himp/attack", "himp/attack");
+		UWIB L 4 A_FaceTarget;
+		Goto See;
+	Missile:
+		UWIB M 10 A_FaceTarget;
+		UWIB EF 6;
+		UWIB G 3 Bright A_SpawnProjectile("MongbatFX", 45, 0, 0, CMF_AIMOFFSET);
+		UWIB HM 6;
+		Goto See;
+	Pain:
+		UWIB M 3;
+		UWIB M 3 A_Pain;
+		Goto See;
+	Death:
+		UWIB G 4 A_ImpDeath;
+		UWIB H 5;
+		Wait;
+	XDeath:
+		UWIB N 5 A_ImpXDeath1;
+		UWIB O 5;
+		UWIB P 5 A_Gravity;
+		UWIB Q 5;
+		Wait;
+	Crash:
+		UWIB N 7 A_ImpExplode;
+		UWIB O 7 A_Scream;
+		UWIB P 7;
+		UWIB Q 3;
+		UWDT G -1 A_SetScale(0.45);
+		Stop;
+	XCrash:
+		UWIB N 7;
+		UWIB O 7;
+		UWIB Z 1;
+		UWDT G -1 A_SetScale(0.45);
 		Stop;
 	}
 }
 
-// Heretic imp chunk 2 ------------------------------------------------------
-
-class HereticImpChunk2 : Actor
+class MongbatFX : Actor //from CentaurFX, needs to be tweaked
 {
 	Default
 	{
-		Mass 5;
-		Radius 4;
-		+NOBLOCKMAP
-		+MOVEWITHSECTOR
-	}
-	States
-	{
-	Spawn:
-		IMPX P 5;
-		IMPX QR 700;
-		Stop;
-	}
-}
-
-// Heretic imp ball ---------------------------------------------------------
-
-class HereticImpBall : Actor
-{
-	Default
-	{
-		Radius 8;
-		Height 8;
-		Speed 10;
-		FastSpeed 20;
-		Damage 1;
+		Speed 20;
+		Damage 4;
 		Projectile;
-		SeeSound "himp/leaderattack";
 		+SPAWNSOUNDSOURCE
-		-ACTIVATEPCROSS
-		-ACTIVATEIMPACT
 		+ZDOOMTRANS
 		RenderStyle "Add";
+		SeeSound "CentaurLeaderAttack";
+		DeathSound "CentaurMissileExplode";
 	}
 	States
 	{
 	Spawn:
-		FX10 ABC 6 Bright;
-		Loop;
+		CTFX A -1 Bright;
+		Stop;
 	Death:
-		FX10 DEFG 5 Bright;
+		CTFX B 4 Bright;
+		CTFX C 3 Bright;
+		CTFX D 4 Bright;
+		CTFX E 3 Bright;
+		CTFX F 2 Bright;
 		Stop;
 	}
 }
-*/
-

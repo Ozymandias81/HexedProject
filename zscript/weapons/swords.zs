@@ -20,10 +20,23 @@
  * SOFTWARE.
 */
 
+/*
+
+3,a_dagger,sword,8,20,5,30,100,145,2,4,5
+4,a_shortsword,sword,16,50,18,20,90,170,3,6,6
+5,a_longsword,sword,24,80,28,15,80,190,4,10,8
+6,a_broadsword,sword,32,100,34,9,70,205,6,13,10
+10,a_shiny sword,sword,34,0,255,11,70,190,7,14,11
+12,a_black sword,sword,36,200,255,5,60,200,7,15,12
+13,a_jeweled sword,sword,28,250,255,11,70,190,7,14,11
+
+*/
+
 class UWWeapSword : AvatarWeapon
 {
 	Default
 	{
+		//$Title Sword
 		+BLOODSPLATTER
 		+WEAPON.MELEEWEAPON
 		Obituary "$OB_UWSWORD";
@@ -172,11 +185,11 @@ class UWWeapSword : AvatarWeapon
 			return;
 		}
 
-		int damage = random[FighterAtk](40, 55);
+		int damage = random[AvatarAtk](4, 10); //longsword base
 		for (int i = 0; i < 16; i++)
 		{
-			if (UWPunch(angle + i*(45./16), damage, 2) ||
-				UWPunch(angle - i*(45./16), damage, 2))
+			if (UWSword(angle + i*(45./16), damage, 2) ||
+				UWSword(angle - i*(45./16), damage, 2))
 			{ // hit something
 				if (weaponspecial >= 3)
 				{
