@@ -60,8 +60,8 @@ vec2 ParallaxMap(mat3 tbn)
 vec2 ParallaxMap(mat3 tbn)
 {
     const float parallaxScale = 0.52;
-    const float minLayers = 2.0;
-    const float maxLayers = 4.0;
+    const float minLayers = 1.0;
+    const float maxLayers = 2.0;
 
     // Calculate fragment view direction in tangent space
     mat3 invTBN = transpose(tbn);

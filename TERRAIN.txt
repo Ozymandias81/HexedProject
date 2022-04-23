@@ -128,7 +128,7 @@ terrain HUW_Sizzle
 }
 
 //Defs - longnamed tx not included!
-floor uw1tex16 HUW_Water
+floor UWWATR01 HUW_Water
 floor uw1tex19 HUW_Sizzle
 floor uw1tex20 HUW_Sizzle
 floor uw1tex21 HUW_Sizzle
@@ -141,7 +141,7 @@ floor uw1tex33 HUW_Water
 floor uw1tex34 HUW_Water
 floor uw1tex41 HUW_Sizzle
 
-floor textures/animated/uw1tex16.png HUW_Water
+floor textures/liquids/uwwatr01.png HUW_Water
 floor textures/animated/uw1tex19.png HUW_Sizzle
 floor textures/animated/uw1tex20.png HUW_Sizzle
 floor textures/animated/uw1tex21.png HUW_Sizzle
