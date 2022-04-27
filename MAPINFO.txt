@@ -4,85 +4,82 @@
 
 gameinfo
 {
+	borderflat = "UW1TEX49"
 	cursorpic = "HUWCURS"
-	EventHandlers="HuwWaterHandler", "CustomShaderHandler"
-	
-	noloopfinalemusic = true
-	titlepage = "TITLE"
-	creditpage = "CREDIT"
-	titlemusic = "HEXEN"
-	titletime = 8
-	advisorytime = 6
-	pagetime = 5
-	chatsound = "Chat"
-	finalemusic = "hub"
+	defaultconversationmenuclass = "HUWConversationMenu"
+	eventhandlers = "CustomShaderHandler"
+	eventhandlers = "HuwWaterHandler"
 	finaleflat = "UW_WIN0"
 	finalepage = "CREDIT"
 	infopage = "cr_000", "cr_001", "cr_002", "cr_003", "cr_004", "cr_005", "cr_006", "cr_007", "cr_008", "cr_009", "cr_010", "cr_011", "cr_012", "cr_013", "CREDIT"
-	quitsound = ""
-	borderflat = "UW1TEX49"
+	messageboxclass = "ClassicMessageBox"
+	playerclasses = "AvatarPlayer"
+	quitmessages = "$*UWQUITMSG" //not included yet
+	statusbarclass = "HUWStatusBar"
+	weaponslot = 1, "UWWeapFist"
+	weaponslot = 2, "UWWeapAxe"
+	weaponslot = 3, "UWWeapMace"
+	weaponslot = 4, "UWWeapSword"
+	
+	advisorytime = 6
+	backpacktype = "BagOfHolding"	// Hexen doesn't have a backpack so use Heretic's.
+	bluramount = 0.0
 	border = HereticBorder
-	telefogheight = 32
-	defkickback = 150
-	skyflatname = "F_SKY"
-	translator = "xlat/heretic.txt"	// not really correct but this was used before.
+	chatsound = "Chat"
+	creditpage = "CREDIT"
 	defaultbloodcolor = "68 00 00"
 	defaultbloodparticlecolor = "ff 00 00"
-	backpacktype = "BagOfHolding"	// Hexen doesn't have a backpack so use Heretic's.
-	statusbarclass = "HexenStatusBar"
-	intermissionmusic = "hub"
-	intermissioncounter = false
-	weaponslot = 1, "FWeapFist", "CWeapMace", "MWeapWand"
-	weaponslot = 2, "FWeapAxe", "CWeapStaff", "MWeapFrost"
-	weaponslot = 3, "FWeapHammer", "CWeapFlame", "MWeapLightning"
-	weaponslot = 4, "FWeapQuietus", "CWeapWraithverge", "MWeapBloodscourge"
-	dimcolor = "00 00 40"
-	dimamount = 0.5
-	bluramount = 0.0
-	menuslidercolor = "Orange"
-	menusliderbackcolor = "White"
-	definventorymaxamount = 25
-	defaultrespawntime = 12
 	defaultdropstyle = 1
-	pickupcolor = "d7 ba 45"
-	quitmessages = "$*RAVENQUITMSG"
-	menufontcolor_title = "UNTRANSLATED"
-	menufontcolor_label = "RED"
-	menufontcolor_value = "UNTRANSLATED"
+	defaultendsequence = "Inter_Chess"
+	defaultrespawntime = 12
+	definventorymaxamount = 25
+	defkickback = 150
+	dimamount = 0.5
+	dimcolor = "00 00 40"
+	finalemusic = "hub"
+	gibfactor = 0.5
+	helpmenuclass = "ReadThisMenu"
+	intermissioncounter = false
+	intermissionmusic = "hub"
+	maparrow = "graphics/MapArrow.txt"
+	maparrow = "maparrows/dagger.txt"
+	menubackbutton = "M_BACK_X"
+	menudelegateclass = "DoomMenuDelegate"
 	menufontcolor_action = "UNTRANSLATED"
 	menufontcolor_header = "GOLD"
 	menufontcolor_highlight = "YELLOW"
+	menufontcolor_label = "RED"
 	menufontcolor_selection = "BRICK"
-	menubackbutton = "M_BACK_X"
-	PlayerClasses = "AvatarPlayer"
-	nightmarefast = true
-	pausesign = "PAUSED"
-	gibfactor = 0.5
-	textscreenx = 10
-	textscreeny = 5
-	defaultendsequence = "Inter_Chess"
-	maparrow = "maparrows/dagger.txt"
-	statscreen_mapnamefont = "*BigFont"
-	statscreen_finishedfont = "*SmallFont"
-	statscreen_enteringfont = "*SmallFont"
-	statscreen_contentfont = "*BigFont"
-	statscreen_authorFont = "*SmallFont"
-	statscreen_coop = "CoopStatusScreen"
-	statscreen_dm = "DeathmatchStatusScreen"
-	statscreen_single = "RavenStatusScreen"
+	menufontcolor_title = "UNTRANSLATED"
+	menufontcolor_value = "UNTRANSLATED"
+	menusliderbackcolor = "White"
+	menuslidercolor = "Orange"
 	messageboxclass = "MessageBoxMenu"
-	helpmenuclass = "ReadThisMenu"
-	menudelegateclass = "DoomMenuDelegate"
+	nightmarefast = true
+	noloopfinalemusic = true
 	normforwardmove = 0x19, 0x32
 	normsidemove = 0x18, 0x28
-/*
-	maparrow = "graphics/MapArrow.txt"
-	defaultconversationmenuclass = "HUWConversationMenu"
-	MessageboxClass = "ClassicMessageBox"
-	statusbarclass = "HUWStatusBar"
-	QuitMessages = "$QUITMSG", "$QUITMSG1", "$QUITMSG2", "$QUITMSG3", "$QUITMSG4", "$QUITMSG5", "$QUITMSG6", 
-	"$QUITMSG7", "$QUITMSG8", "$QUITMSG9", "$QUITMSG10", "$QUITMSG11", "$QUITMSG12", "$QUITMSG13", "$QUITMSG14"
-*/
+	pagetime = 5
+	pausesign = "PAUSED"
+	pickupcolor = "d7 ba 45"
+	quitsound = ""
+	skyflatname = "F_SKY"
+	statscreen_authorFont = "*SmallFont"
+	statscreen_contentfont = "*BigFont"
+	statscreen_coop = "CoopStatusScreen"
+	statscreen_dm = "DeathmatchStatusScreen"
+	statscreen_enteringfont = "*SmallFont"
+	statscreen_finishedfont = "*SmallFont"
+	statscreen_mapnamefont = "*BigFont"
+	statscreen_single = "RavenStatusScreen"
+	statusbarclass = "HexenStatusBar"
+	telefogheight = 32
+	textscreenx = 10
+	textscreeny = 5
+	titlemusic = "HEXEN"
+	titlepage = "TITLE"
+	titletime = 8
+	translator = "xlat/heretic.txt"	// not really correct but this was used before.
 }
 
 ////////////////////////////////
@@ -122,6 +119,11 @@ defaultmap
 	vertwallshade = 1
 }
 
+cluster 999
+{
+	hub
+}
+
 map TITLEMAP lookup "TITLEMAP"
 {
 	music = "HUWINTRO"
@@ -132,54 +134,63 @@ map TITLEMAP lookup "TITLEMAP"
 map HUWMAP01 lookup "HUWMAP01"
 {
 	levelnum = 1
+	cluster = 999
 	music = "UWWAND"
 }
 
 map HUWMAP02 lookup "HUWMAP02"
 {
 	levelnum = 2
+	cluster = 999
 	music = "UWMAPS"
 }
 
 map HUWMAP03 lookup "HUWMAP03"
 {
 	levelnum = 3
+	cluster = 999
 	music = "SEWERS"
 }
 
 map HUWMAP04 lookup "HUWMAP04"
 {
 	levelnum = 4
+	cluster = 999
 	music = "UWDESC"
 }
 
 map HUWMAP05 lookup "HUWMAP05"
 {
 	levelnum = 5
+	cluster = 999
 	music = "UWWAND"
 }
 
 map HUWMAP06 lookup "HUWMAP06"
 {
 	levelnum = 6
+	cluster = 999
 	music = "UWWAND"
 }
 
 map HUWMAP07 lookup "HUWMAP07"
 {
 	levelnum = 7
+	cluster = 999
 	music = "UWWAND"
 }
 
 map HUWMAP08 lookup "HUWMAP08"
 {
 	levelnum = 8
+	cluster = 999
 	music = "UWWAND"
 }
 
 map HUWMAP09 lookup "HUWMAP00"
 {
 	levelnum = 9
+	cluster = 999
 	music = "UWWAND"
 }
 

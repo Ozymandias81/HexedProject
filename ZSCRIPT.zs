@@ -61,10 +61,8 @@ class SimpleActor : Actor
 #include "zscript/weapons/swords.zs"
 //#include "zscript/weapons/others.zs"
 
-//DELETE
-#include "zscript/tests.zs"				//dumb stuff
-
 //FOES
+#include "zscript/critters/easters.zs"
 #include "zscript/critters/bats.zs"
 #include "zscript/critters/ghosts.zs"
 #include "zscript/critters/imps.zs"

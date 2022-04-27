@@ -223,23 +223,25 @@ class MongbatFX : Actor //from CentaurFX, needs to be tweaked
 		Speed 20;
 		Damage 4;
 		Projectile;
+		Scale 0.65;
+		+BRIGHT
 		+SPAWNSOUNDSOURCE
 		+ZDOOMTRANS
 		RenderStyle "Add";
 		SeeSound "CentaurLeaderAttack";
 		DeathSound "CentaurMissileExplode";
 	}
+	
 	States
 	{
 	Spawn:
-		CTFX A -1 Bright;
+		CTFX A -1;
 		Stop;
 	Death:
-		CTFX B 4 Bright;
-		CTFX C 3 Bright;
-		CTFX D 4 Bright;
-		CTFX E 3 Bright;
-		CTFX F 2 Bright;
+		MHIT A 4;
+		MHIT B 3;
+		MHIT C 4;
+		MHIT D 3;
 		Stop;
 	}
 }
