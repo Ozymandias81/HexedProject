@@ -31,6 +31,8 @@ Class CutsceneEnabled : Inventory
 	}
 }
 
+class FountainCounter : Inventory { Default { Inventory.MaxAmount 1; } }
+
 //Defining standalone weapons for Avatar
 class AvatarWeapon : Weapon
 {

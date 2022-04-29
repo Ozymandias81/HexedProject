@@ -36,28 +36,41 @@ class HUW_Fountain : SwitchableDecoration
 		Radius 16;
 		Height 56;
 		Scale 0.45;
+		+DONTSPLASH
 		+DONTTHRUST
+		+INVULNERABLE
+		+LOOKALLAROUND //this is needed otherwise we can drink only while in front of it - ozy81
 		+NOBLOOD
 		+NOBLOODDECALS
 		+NOTAUTOAIMED
 		+SHOOTABLE
 		+SOLID
 		+USESPECIAL
-		Activation THINGSPEC_Switch|THINGSPEC_Activate;
+		Activation THINGSPEC_Switch | THINGSPEC_ThingTargets;
 		Tag "$UWTAGFOUN";
 	}
 	
 	States
 	{
 	Active:
-		UWFN A 0 A_RadiusGive("CrystalVial",128.0,RGF_PLAYERS|RGF_NOSIGHT,10);
-		"####" A 1 A_StartSound("SFX/FlowLoop", CHAN_BODY, CHANF_LOOPING, 0.7, ATTN_STATIC);
+		UWFN A 0 A_JumpIfHealthLower(100, 1, AAPTR_TARGET);
+		Goto Inactive;
+		"####" A 0 A_GiveInventory("FountainCounter", 1);
+		"####" A 0 A_RadiusGive("CrystalVial",128.0,RGF_PLAYERS|RGF_NOSIGHT,10);
+		"####" A 0 A_JumpIfInventory("FountainCounter", 1, "Dry");
+		Goto Inactive;
 	Spawn:
+		UWFN A 0 NODELAY A_StartSound("SFX/FlowLoop", CHAN_BODY, CHANF_LOOPING, 0.7, ATTN_STATIC);
+	Inactive:
 		UWFN BCDA 8;
 		Loop;
-	Inactive:
-		UWFN E 1 A_StopSound(CHAN_BODY);
+	SpawnSet2:
 		"####" E -1;
 		Stop;
+	Dry:
+		//"####" A 0 A_RemoveChildren(TRUE, RMVF_MISC);
+		"####" A 0 A_StopSound(CHAN_BODY);
+		"####" A 0 {bUseSpecial = FALSE;}
+		Goto SpawnSet2;
 	}
 }
