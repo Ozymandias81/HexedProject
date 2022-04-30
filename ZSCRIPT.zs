@@ -68,6 +68,7 @@ class SimpleActor : Actor
 #include "zscript/critters/imps.zs"
 #include "zscript/critters/females_f.zs"
 #include "zscript/critters/males_f.zs"
+#include "zscript/critters/skeleton.zs"
 
 /*
 #include "zscript/critters/demon.zs"
@@ -87,7 +88,6 @@ class SimpleActor : Actor
 #include "zscript/critters/reaper.zs"
 #include "zscript/critters/rotworms.zs"
 #include "zscript/critters/shadows.zs"
-#include "zscript/critters/skeleton.zs"
 #include "zscript/critters/slugs.zs"
 #include "zscript/critters/spiders.zs"
 #include "zscript/critters/staff_w.zs"

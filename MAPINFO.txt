@@ -211,6 +211,7 @@ DoomEdNums
 	20009 = UWWeapMace
 	20066 = HUW_Bat1
 	20073 = HUW_Bat3
+	20074 = HUW_Skeleton
 	20075 = HUW_Imp
 	20081 = HUW_Imp2 //mongbat
 	20100 = HUW_Ghost4
