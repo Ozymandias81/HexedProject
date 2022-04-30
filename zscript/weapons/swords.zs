@@ -53,32 +53,10 @@ class UWWeapSword : AvatarWeapon
 		RSWR A 1 A_Lower;
 		Loop;
 	Ready:
-		RSWR A 1 A_WeaponReady; //UWSwordInit;
+		RSWR A 1 A_WeaponReady;
 		Loop;
 	Fire:
-		"####" "#" 0 {
-					if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_BACK))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.BBWD"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_FORWARD))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.FFWD"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					return;
-				}
+		"####" "#" 0 A_UWWeapInit;
 		Goto Ready;
 	Fire.Left:
 		LSWR B 6 Offset (5, 40);
@@ -133,43 +111,6 @@ class UWWeapSword : AvatarWeapon
 	Spawn:
 		UWSW A -1;
 		Stop;
-	}
-	
-	//============================================================================
-	//
-	// UWSwordInit
-	//
-	// Check if players uses any kind of attack with distinct states
-	//
-	//============================================================================
-	
-	action void A_UWSwordInit() //int flags = 0
-	{
-		//int buttons = GetPlayerInput(-1, MODINPUT_BUTTONS);
-		
-		if (!player) return;
-		
-		//DoReadyWeaponToSwitch(player, !(flags & WRF_NoSwitch));
-		//if ((flags & WRF_NoFire) != WRF_NoFire) DoReadyWeaponToFire(player.mo, !(flags & WRF_NoPrimary), !(flags & WRF_NoSecondary));
-		//if (!(flags & WRF_NoBob)) DoReadyWeaponToBob(player);
-
-		//player.WeaponState |= GetButtonStateFlags(flags);														
-		//DoReadyWeaponDisableSwitch(player, flags & WRF_DisableSwitch);
-		
-		if (player.cmd.buttons & BT_FORWARD)
-		{
-			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("FireFFWD"));
-			A_StartSound ("*fistgrunt", CHAN_VOICE);
-		}
-		
-		else if (player.cmd.buttons & BT_MOVELEFT)
-		{
-			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("FireLeft"));
-			A_StartSound ("*fistgrunt", CHAN_VOICE);
-		}
-		
-		A_WeaponReady();
-		
 	}
 
 	//============================================================================

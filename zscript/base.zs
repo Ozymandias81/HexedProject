@@ -52,6 +52,52 @@ class AvatarWeapon : Weapon
 	//
 	//============================================================================
 
+	action bool A_UWPunchInit()
+	{
+		if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			return true;
+		}
+		else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			return true;
+		}
+		return false;
+	}
+	
+	action bool A_UWWeapInit()
+	{
+		if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			return true;
+		}
+		else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			return true;
+		}
+		else if((GetPlayerInput(INPUT_BUTTONS) & BT_BACK))
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.BBWD"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			return true;
+		}
+		else if((GetPlayerInput(INPUT_BUTTONS) & BT_FORWARD))
+		{
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.FFWD"));
+			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			return true;
+		}
+		return false;
+	}
+
 	action bool UWPunch(double angle, int damage, int power)
 	{
 		Class<Actor> pufftype;

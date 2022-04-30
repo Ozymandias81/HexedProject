@@ -43,6 +43,9 @@ class UWWeapAxe : AvatarWeapon
 		RAXE A 1 A_WeaponReady;
 		Loop;
 	Fire:
+		"####" "#" 0 A_UWWeapInit;
+		Goto Ready;
+	Fire:
 		RAXE B 8 Offset (5, 40);
 		RAXE C 7 Offset (5, 40);
 		RAXE D 7 Offset (5, 40) A_UWPunchAttack;

@@ -45,19 +45,7 @@ class UWWeapFist : AvatarWeapon
 		RPCH E 1 A_WeaponReady;
 		Loop;
 	Fire:
-		RPCH D 0 {
-					if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					return;
-				}
+		RPCH D 0 A_UWPunchInit;
 		Goto Ready;
 	Fire.Left:
 		LPCH D 8 Offset (5, 40);

@@ -53,29 +53,7 @@ class UWWeapMace : AvatarWeapon
 		RMAC A 1 A_WeaponReady;
 		Loop;
 	Fire:
-		RMAC A 0 {
-					if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_BACK))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.BBWD"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					else if((GetPlayerInput(INPUT_BUTTONS) & BT_FORWARD))
-					{
-						player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.FFWD"));
-						A_StartSound ("*fistgrunt", CHAN_VOICE);
-					}
-					return;
-				}
+		"####" "#" 0 A_UWWeapInit;
 		Goto Ready;
 	Fire.Left:
 		LMAC B 6 Offset (5, 40);
