@@ -21,13 +21,13 @@ SOUNDS:
 Blue Sky, Origin
 
 SPRITES:
-Blue Sky, Origin
+Blue Sky, Origin, NeoWorm (Shield HUD base)
 
 SHADERS:
 AFADoomer, Talon1024, Ozymandias81
 
 TEXTURES:
-Blue Sky, Origin, Ozymandias81 (Custom, UWDR_OZ)
+Blue Sky, Origin, Ozymandias81 (Custom, UWDR_OZ), Sir Robin (UW1TEX42)
 
 ZSCRIPT:
 Sir Robin, AFADoomer, Talon1024, Tormentor667, Ozymandias81

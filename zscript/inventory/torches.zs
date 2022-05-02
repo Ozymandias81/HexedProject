@@ -200,7 +200,7 @@ class HUW_Candle1Pickup : PoweredInventory
 	Default
 	{
 		//$Category HexedUW/Inventory
-		//$Title Useable Candle (normal)
+		//$Title Useable Candle
 		//$Color 6
 		Scale 0.45;
 		Tag "$UWTAGCAND";
@@ -267,7 +267,7 @@ class HUW_Candle2Pickup : PoweredInventory
 	Default
 	{
 		//$Category HexedUW/Inventory
-		//$Title Useable Candle (big)
+		//$Title Useable Taper
 		//$Color 6
 		Scale 0.45;
 		Tag "$UWTAGCAND";

@@ -1,5 +1,5 @@
 REMINDER:
 
 - Flammable objects can be turned on all together, this is not right
-- Code properly weapons attacks
-- Add sounds for Mongbats and Ghosts
+- Code properly weapons attacks plus shield
+- Add sounds for most of all enemies

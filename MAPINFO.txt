@@ -206,6 +206,8 @@ DoomEdNums
 	19000 = HUW_Bat2 //new
 	19001 = HUW_Ghost2 //new
 	19002 = HUW_Ghost3 //new
+	19003 = HUW_Dwarf3 //new
+	19004 = HUW_MaleF4 //new
 	20000 = UWWeapAxe
 	20004 = UWWeapSword
 	20009 = UWWeapMace
@@ -214,6 +216,14 @@ DoomEdNums
 	20074 = HUW_Skeleton
 	20075 = HUW_Imp
 	20081 = HUW_Imp2 //mongbat
+	20084 = HUW_Dwarf1
+	20086 = HUW_Dwarf2 //also Goldthirst
+	20090 = HUW_MaleF1 //also Bragit
+	20092 = HUW_MaleF2
+	20093 = HUW_MaleF3
+	20095 = HUW_FemaleF1
+	20096 = HUW_FemaleF2
+	20097 = HUW_FemaleF3
 	20100 = HUW_Ghost4
 	20101 = HUW_Ghost1
 	20144 = HUW_LanternPickup
