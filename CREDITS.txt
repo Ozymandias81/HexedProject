@@ -21,7 +21,7 @@ SOUNDS:
 Blue Sky, Origin
 
 SPRITES:
-Blue Sky, Origin, NeoWorm (Shield HUD base)
+Blue Sky, Origin, NeoWorm (Shield HUD base), Ozymandias81 (ultrawide HUD weapons)
 
 SHADERS:
 AFADoomer, Talon1024, Ozymandias81
