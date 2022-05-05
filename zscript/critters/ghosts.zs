@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-class HUWGhostBase : Actor
+class HUW_GhostBase : Actor
 {
 	int countdown;
 	int maxchase;
@@ -35,6 +35,8 @@ class HUWGhostBase : Actor
 		-CANUSEWALLS
 		-MTHRUSPECIES
 		+FLOAT
+		+NOBLOOD
+		+NOBLOODDECALS
 		+NOGRAVITY
 		+NOINFIGHTING
 		+THRUACTORS //ghosts
@@ -46,7 +48,7 @@ class HUWGhostBase : Actor
 		PainSound "ghost/pain";
 		DeathSound "ghost/death";
 		ActiveSound "ghost/idle";
-		HUWGhostBase.MaxChaseTime 48;
+		HUW_GhostBase.MaxChaseTime 48;
 	}
 
 	override void PostBeginPlay()
@@ -108,7 +110,7 @@ class HUWGhostBase : Actor
 }
 
 //Ghosts - cyan, red, white and purple
-class HUW_Ghost1 : HUWGhostBase
+class HUW_Ghost1 : HUW_GhostBase
 {
 	Default
 	{

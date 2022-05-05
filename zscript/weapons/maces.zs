@@ -29,7 +29,7 @@
 
 */
 
-class UWWeapMace : AvatarWeapon
+class HUW_WeapMace : AvatarWeapon
 {
 	Default
 	{

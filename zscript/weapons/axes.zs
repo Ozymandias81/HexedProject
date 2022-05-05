@@ -29,7 +29,7 @@
 
 */
 
-class UWWeapAxe : AvatarWeapon
+class HUW_WeapAxe : AvatarWeapon
 {
 	Default
 	{

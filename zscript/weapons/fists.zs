@@ -22,7 +22,7 @@
 
 // 15,a_fist,unarmed,0,0,255,15,90,140,4,2,3
 
-class UWWeapFist : AvatarWeapon
+class HUW_WeapFist : AvatarWeapon
 {
 	Default
 	{

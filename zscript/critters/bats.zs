@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-class HUWBatBase : Actor
+class HUW_BatBase : Actor
 {
 	Actor roostgoal;
 	int countdown;
@@ -41,7 +41,7 @@ class HUWBatBase : Actor
 		PainSound "batfam/pain";
 		DeathSound "batfam/death";
 		ActiveSound "batfam/idle";
-		HUWBatBase.MaxChaseTime 48;
+		HUW_BatBase.MaxChaseTime 48;
 	}
 
 	States
@@ -178,7 +178,7 @@ class HUWBatBase : Actor
 }
 
 //Bats - black, brown and red
-class HUW_Bat1 : HUWBatBase
+class HUW_Bat1 : HUW_BatBase
 {
 	Default
 	{
@@ -194,7 +194,7 @@ class HUW_Bat1 : HUWBatBase
 		Monster;
 		Tag "$T_UWBAT1";
 		HitObituary "$HB_UWBAT1";
-		HUWBatBase.MaxChaseTime 350;
+		HUW_BatBase.MaxChaseTime 350;
 	}
 
 	States
@@ -247,7 +247,7 @@ class HUW_Bat2 : HUW_Bat1
 		Speed 4.33333334;
 		Tag "$T_UWBAT2";
 		HitObituary "$HB_UWBAT2";
-		HUWBatBase.MaxChaseTime 700;
+		HUW_BatBase.MaxChaseTime 700;
 	}
 
 	States
@@ -302,7 +302,7 @@ class HUW_Bat3 : HUW_Bat1
 		Monster;
 		Tag "$T_UWBAT3";
 		HitObituary "$HB_UWBAT3";
-		HUWBatBase.MaxChaseTime 1050;
+		HUW_BatBase.MaxChaseTime 1050;
 	}
 
 	States
