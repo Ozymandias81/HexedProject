@@ -66,7 +66,7 @@ class HUW_WeapSword : AvatarWeapon
 		LSWR F 3 Offset (5, 40);
 		LSWR G 3 Offset (5, 40) A_UWSwordAttack;
 		LSWR H 3 Offset (5, 40);
-		LSWR H 6 Offset (5, 80) A_ReFire;
+		LSWR H 4 Offset (-25, 80) A_ReFire;
 		Goto Ready;
 	Fire.Right:
 		RSWR B 6 Offset (5, 40);
@@ -76,7 +76,7 @@ class HUW_WeapSword : AvatarWeapon
 		RSWR F 3 Offset (5, 40);
 		RSWR G 3 Offset (5, 40) A_UWSwordAttack;
 		RSWR H 3 Offset (5, 40);
-		RSWR H 6 Offset (5, 80) A_ReFire;
+		RSWR H 4 Offset (25, 80) A_ReFire;
 		Goto Ready;
 	Fire.FFWD:
 		RSWR I 6 Offset (5, 40);
