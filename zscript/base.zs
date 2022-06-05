@@ -41,7 +41,6 @@ class AvatarWeapon : Weapon
 		//$Category HexedUW/Weapons
 		Weapon.Kickback 150;
 		Scale 0.45;
-		//Inventory.ForbiddenTo FighterPlayer, ClericPlayer, MagePlayer;
 	}
 	
 	//============================================================================
@@ -54,13 +53,13 @@ class AvatarWeapon : Weapon
 
 	action bool A_UWPunchInit()
 	{
-		if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+		if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT)) //to be replaced with shield and altattack usage
 		{
 			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
 			return true;
 		}
-		else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
+		else if((GetPlayerInput(INPUT_BUTTONS) & BT_ATTACK))
 		{
 			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
