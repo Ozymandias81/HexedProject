@@ -36,9 +36,9 @@ UWOILPICK = "Found an Oil Flask.";
 UWTORPICK = "An unused Torch.";
 
 //Enemies
-T_UWBAT1 = "A Cave Bat"
-T_UWBAT2 = "A Swamp Bat" //new
-T_UWBAT3 = "A Vampire Bat"
+T_UWBAT1 = "A Cave Bat";
+T_UWBAT2 = "A Swamp Bat"; //new
+T_UWBAT3 = "A Vampire Bat";
 
 //Obituaries
 OB_FEMFI1 = "";
