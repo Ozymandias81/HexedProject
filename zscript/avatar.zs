@@ -125,4 +125,23 @@ class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based var
 		ACLO E 8;
 		Stop;
 	}
+	
+	static void DoShield(Actor mo)
+	{
+		//if (mo.player && mo.player.ReadyWeapon && AvatarWeapon(mo.player.ReadyWeapon) && mo.player.playerstate == PST_LIVE && !mo.player.FindPSprite(-10))
+		//{
+			AvatarWeapon wpn = AvatarWeapon(mo.player.ReadyWeapon);
+
+			//if (!wpn) { return; }
+
+			if (wpn) //implement condition later
+			{
+				if (mo.FindInventory("PowerStrength")) { wpn.modifier = 3.0; } // Strength increases damage by 3 and range by 10
+				else { wpn.modifier = 1.0; }
+
+				mo.player.SetPsprite(-10, wpn.FindState("ShieldRaise"), true);
+			}
+		//}
+	}
+	
 }

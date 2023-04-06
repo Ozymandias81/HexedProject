@@ -22,6 +22,7 @@ AddOptionMenu "OptionsMenu"
 {
 	StaticText "$MN_OPZHUW"
 	StaticText ""
+	Control "$MN_SHIELD","pukename QuickShield"
 	Option "$MN_OPDIST","huw_lod","HUWDist"
 	Option "$MN_OPHEAT","huw_shaderoverlayswitch","YesNo"
 }

@@ -36,11 +36,35 @@ class FountainCounter : Inventory { Default { Inventory.MaxAmount 1; } }
 //Defining standalone weapons for Avatar
 class AvatarWeapon : Weapon
 {
+	double modifier;
+
 	Default
 	{
 		//$Category HexedUW/Weapons
 		Weapon.Kickback 150;
 		Scale 0.45;
+	}
+	
+	States
+	{
+		ShieldRaise: //needs to be adjusted for proper behavior yet
+			RPCH F 1 Offset(84, 68);
+			RPCH F 1 Offset(72, 56);
+			RPCH F 1 Offset(56, 40);
+			RPCH F 1 Offset(40, 24);
+			RPCH F 1 Offset(24, 7);
+			RPCH F 1 Offset(6, 2) A_StartSound("knife/swing",CHAN_WEAPON);
+			RPCH F 2 Offset(4, 0) A_CustomPunch(int(8 * invoker.modifier), TRUE, CPF_NOTURN, "PunchPuff", invoker.modifier ? 80 : 70);
+			RPCH F 1 Offset(6, 2) { bDontBlast = true; }
+			RPCH F 1 Offset(24, 7) { bDontBlast = false; }
+			RPCH F 1 Offset(36, 20);
+			RPCH F 1 Offset(44, 28);
+			RPCH F 1 Offset(52, 36);
+			RPCH F 1 Offset(60, 44);
+			RPCH F 1 Offset(68, 52);
+			RPCH F 1 Offset(76, 60);
+			RPCH F 1 Offset(82, 66);
+			Stop;
 	}
 	
 	//============================================================================

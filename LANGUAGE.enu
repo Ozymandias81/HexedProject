@@ -22,6 +22,7 @@ MN_OPNEAR = "Near";
 MN_OPNONE = "None";
 MN_OPNORM = "Normal";
 MN_OPZHUW = "PLEASE CONFIGURE THESE OPTIONS BEFORE PLAYING!";
+MN_SHIELD = "Raise Shield";
 
 //Tags
 UWTAGCAND = "Candle";

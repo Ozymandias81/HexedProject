@@ -96,3 +96,15 @@ script "OhNoes!" DEATH
 	// [ZK] restore music
 	LocalSetMusic("*");
 }
+
+//shield script
+script "QuickShield" (void)
+{
+	If (
+		//(GetActorViewHeight(0) >> 16 < 56) ||
+		(GetLevelInfo(LEVELINFO_LEVELNUM)==99)
+	)
+		Terminate;
+
+	ScriptCall("AvatarPlayer", "DoShield");
+}
