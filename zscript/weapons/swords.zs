@@ -56,17 +56,7 @@ class HUW_WeapSword : AvatarWeapon
 		RSWR A 1 A_WeaponReady;
 		Loop;
 	Fire:
-		"####" "#" 0 A_UWWeapInit;
-		Goto Ready;
-	Fire.Left:
-		LSWR B 6 Offset (5, 40);
-		LSWR C 5 Offset (5, 40);
-		LSWR D 4 Offset (5, 40);
-		LSWR E 3 Offset (5, 40);
-		LSWR F 3 Offset (5, 40);
-		LSWR G 3 Offset (5, 40) A_UWSwordAttack;
-		LSWR H 3 Offset (5, 40);
-		LSWR H 4 Offset (-25, 80) A_ReFire;
+		"####" "#" 0 A_Jump(255,"Fire.Right","Fire.BBWD","Fire.FFWD");
 		Goto Ready;
 	Fire.Right:
 		RSWR B 6 Offset (5, 40);

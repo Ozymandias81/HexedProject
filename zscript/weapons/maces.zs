@@ -53,17 +53,7 @@ class HUW_WeapMace : AvatarWeapon
 		RMAC A 1 A_WeaponReady;
 		Loop;
 	Fire:
-		"####" "#" 0 A_UWWeapInit;
-		Goto Ready;
-	Fire.Left:
-		LMAC B 6 Offset (5, 40);
-		LMAC C 5 Offset (5, 40);
-		LMAC D 4 Offset (5, 40);
-		LMAC E 3 Offset (5, 40);
-		LMAC F 3 Offset (5, 40);
-		LMAC G 3 Offset (5, 40) A_UWMaceAttack;
-		LMAC H 3 Offset (5, 40);
-		LMAC H 6 Offset (5, 80) A_ReFire;
+		"####" "#" 0 A_Jump(255,"Fire.Right","Fire.BBWD","Fire.FFWD");
 		Goto Ready;
 	Fire.Right:
 		RMAC B 6 Offset (5, 40);

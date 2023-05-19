@@ -7,8 +7,7 @@ gameinfo
 	borderflat = "UW1TEX49"
 	cursorpic = "HUWCURS"
 	defaultconversationmenuclass = "HUWConversationMenu"
-	eventhandlers = "CustomShaderHandler"
-	eventhandlers = "HUWWaterHandler"
+	eventhandlers = "CustomShaderHandler", "BoidArrayHandler", "HUWWaterHandler"
 	finaleflat = "UW_WIN0"
 	finalepage = "CREDIT"
 	infopage = "cr_000", "cr_001", "cr_002", "cr_003", "cr_004", "cr_005", "cr_006", "cr_007", "cr_008", "cr_009", "cr_010", "cr_011", "cr_012", "cr_013", "CREDIT"
@@ -202,6 +201,10 @@ map HUWMAP00 lookup "HUWMAP00"
 
 DoomEdNums
 {
+	12034 = NJ_FlockSpawnerCrow
+	12035 = NJ_FlockSpawnerLilBirb
+	12036 = NJ_FlockSpawnerFlappy
+	
 	18000 = PaganU8
 	19000 = HUW_Bat2 //new
 	19001 = HUW_Ghost2 //new

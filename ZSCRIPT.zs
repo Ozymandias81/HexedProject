@@ -1,4 +1,4 @@
-version "4.3.3"
+version "4.7.1"
 
 // Actor that does the bare minumum of ticking
 // Use for static, non-interactive actors
@@ -45,6 +45,7 @@ class SimpleActor : Actor
 #include "zscript/props.zs"
 
 //SFX
+#include "zscript/sfx/boids.zs"
 #include "zscript/sfx/heateffect.zs"
 #include "zscript/sfx/smoke.zs"
 #include "zscript/sfx/splashes.zs"

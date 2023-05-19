@@ -53,17 +53,7 @@ class HUW_WeapAxe : AvatarWeapon
 		RAXE A 1 A_WeaponReady;
 		Loop;
 	Fire:
-		"####" "#" 0 A_UWWeapInit;
-		Goto Ready;
-	Fire.Left:
-		LAXE B 6 Offset (5, 40);
-		LAXE C 5 Offset (5, 40);
-		LAXE D 4 Offset (5, 40);
-		LAXE E 3 Offset (5, 40);
-		LAXE F 3 Offset (5, 40);
-		LAXE G 3 Offset (5, 40) A_UWAxeAttack;
-		LAXE H 3 Offset (5, 40);
-		LAXE H 6 Offset (5, 80) A_ReFire;
+		"####" "#" 0 A_Jump(255,"Fire.Right","Fire.BBWD","Fire.FFWD");
 		Goto Ready;
 	Fire.Right:
 		RAXE B 6 Offset (5, 40);
@@ -144,5 +134,5 @@ class HUW_WeapAxe : AvatarWeapon
 		double slope = AimLineAttack (angle, DEFMELEERANGE, null, 0., ALF_CHECK3D);
 		LineAttack (angle, DEFMELEERANGE, slope, damage, 'Melee', "PunchPuff", true);
 	}
-	
+
 }

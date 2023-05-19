@@ -45,16 +45,6 @@ class HUW_WeapFist : AvatarWeapon
 		RPCH E 1 A_WeaponReady;
 		Loop;
 	Fire:
-		RPCH D 0 A_UWPunchInit;
-		Goto Ready;
-	Fire.Left:
-		LPCH D 8 Offset (5, 40);
-		LPCH C 7 Offset (5, 40);
-		LPCH B 7 Offset (5, 40) A_UWPunchAttack;
-		LPCH C 7 Offset (5, 40);
-		LPCH D 8 Offset (5, 40) A_ReFire;
-		Goto Ready;
-	Fire.Right:
 		RPCH D 8 Offset (5, 40);
 		RPCH C 7 Offset (5, 40);
 		RPCH B 7 Offset (5, 40) A_UWPunchAttack;

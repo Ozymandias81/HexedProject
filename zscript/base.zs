@@ -91,15 +91,16 @@ class AvatarWeapon : Weapon
 		}
 		return false;
 	}
-	
+
 	action bool A_UWWeapInit()
 	{
-		if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT))
+		if((GetPlayerInput(INPUT_BUTTONS) & BT_ATTACK))
 		{
-			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+			
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
-			return true;
+			return A_Jump(255,"Fire.Left","Fire.Right","Fire.BBWD","Fire.FFWD");
 		}
+		/*
 		else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
 		{
 			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
@@ -118,6 +119,7 @@ class AvatarWeapon : Weapon
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
 			return true;
 		}
+		*/
 		return false;
 	}
 
