@@ -125,7 +125,7 @@ class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based var
 		ACLO E 8;
 		Stop;
 	}
-	
+	/*
 	static void DoShield(Actor mo)
 	{
 		//if (mo.player && mo.player.ReadyWeapon && AvatarWeapon(mo.player.ReadyWeapon) && mo.player.playerstate == PST_LIVE && !mo.player.FindPSprite(-10))
@@ -143,5 +143,5 @@ class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based var
 			}
 		//}
 	}
-	
+	*/
 }

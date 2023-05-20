@@ -204,6 +204,8 @@ DoomEdNums
 	12034 = NJ_FlockSpawnerCrow
 	12035 = NJ_FlockSpawnerLilBirb
 	12036 = NJ_FlockSpawnerFlappy
+	12037 = HUW_FlockSpawnerBatsE
+	12038 = HUW_FlockSpawnerBatsF
 	
 	18000 = PaganU8
 	19000 = HUW_Bat2 //new

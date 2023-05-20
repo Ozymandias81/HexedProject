@@ -45,7 +45,7 @@ class AvatarWeapon : Weapon
 		Scale 0.45;
 	}
 	
-	States
+	/*States
 	{
 		ShieldRaise: //needs to be adjusted for proper behavior yet
 			RPCH F 1 Offset(84, 68);
@@ -65,7 +65,7 @@ class AvatarWeapon : Weapon
 			RPCH F 1 Offset(76, 60);
 			RPCH F 1 Offset(82, 66);
 			Stop;
-	}
+	}*/
 	
 	//============================================================================
 	//
@@ -77,16 +77,15 @@ class AvatarWeapon : Weapon
 
 	action bool A_UWPunchInit()
 	{
-		if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVELEFT)) //to be replaced with shield and altattack usage
+		if((GetPlayerInput(INPUT_BUTTONS) & BT_ATTACK)) //to be replaced with shield and altattack usage
 		{
-			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Punch"));
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
 			return true;
 		}
-		else if((GetPlayerInput(INPUT_BUTTONS) & BT_ATTACK))
+		else if((GetPlayerInput(INPUT_BUTTONS) & BT_ALTATTACK))
 		{
-			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
-			A_StartSound ("*fistgrunt", CHAN_VOICE);
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("ShieldRaise"));
 			return true;
 		}
 		return false;
@@ -96,11 +95,10 @@ class AvatarWeapon : Weapon
 	{
 		if((GetPlayerInput(INPUT_BUTTONS) & BT_ATTACK))
 		{
-			
+			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Left"));
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
-			return A_Jump(255,"Fire.Left","Fire.Right","Fire.BBWD","Fire.FFWD");
+			return true;
 		}
-		/*
 		else if((GetPlayerInput(INPUT_BUTTONS) & BT_MOVERIGHT))
 		{
 			player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Right"));
@@ -119,7 +117,6 @@ class AvatarWeapon : Weapon
 			A_StartSound ("*fistgrunt", CHAN_VOICE);
 			return true;
 		}
-		*/
 		return false;
 	}
 

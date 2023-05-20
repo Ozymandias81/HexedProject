@@ -871,17 +871,16 @@ Class NJ_FlockBoidCrow : BOID_Boid
         
     	Override Void Tick()
     	{
-    	    BoidFlight(MaxVelocity: 12, CloseToMaster: TRUE, DistanceFromMaster: 200);
+    	    BoidFlight(MaxVelocity: 12, CloseToMaster: TRUE, DistanceFromMaster: 400);
     	    Super.tick();
     	}
-        
-    
+
 	Default
 	{
 		+NOINTERACTION;
 		-BRIGHT
 		Boid_Boid.BoidActor "NJ_FlockBoidCrow";
-		Boid_Boid.HorizonNormalizer  40;
+		Boid_Boid.HorizonNormalizer 40;
 	}
 		
 	States
@@ -889,7 +888,7 @@ Class NJ_FlockBoidCrow : BOID_Boid
 		Spawn:
 			TNT1 A 0;
 			TNT1 A 0 A_SetScale (frandom(0.8,1.2));
-			TNT1 A random (0, 8);
+			TNT1 A random (4, 8);
 		Spawn2:	
 			BIR1 AB 2;
 			BIR1 DCD 3;

@@ -345,3 +345,266 @@ class HUW_Bat3 : HUW_Bat1
 			Stop;
 	}
 }
+
+//HUW TESTS - these bats never roost
+class HUW_BatSceneryF : BOID_Boid
+{
+	Default
+	{
+		Health 100;
+		Radius 16;
+		Height 32;
+		FloatSpeed 2.33333333;
+		Speed 3.33333334;
+		PainChance 200;
+		Monster;
+		Tag "$T_UWBAT1";
+		HitObituary "$HB_UWBAT1";
+		Boid_Boid.BoidActor "HUW_BatSceneryF";
+		Boid_Boid.HorizonNormalizer 40;
+		Boid_Boid.BoidCohesion 12;
+		Boid_Boid.MinDistanceBeacon 600;
+		Boid_Boid.MaxDistanceBeacon 1200;
+		-BRIGHT
+		+FRIENDLY
+	}
+	
+	Override void PostBeginPlay()
+	{
+		if(master)
+		{
+			FlockID = Boid_Boid(master).FlockID;
+		}
+	}
+	
+	Override Void Tick()
+	{
+		BoidFlight(MaxVelocity: 12, CloseToMaster: TRUE, DistanceFromMaster: 200);
+		Super.tick();
+	}
+
+	States
+	{
+		Spawn:
+			UWB1 ABCB 3 A_Look();
+			Loop;
+		See:
+			"####" A 1 A_Chase;
+			"####" AA 1 A_Chase(null,null,CHF_NOPLAYACTIVE);
+			"####" B 1 A_Chase;
+			"####" BB 1 A_Chase(null,null,CHF_NOPLAYACTIVE);
+			"####" C 1 A_Chase;
+			"####" CC 1 A_Chase(null,null,CHF_NOPLAYACTIVE);
+			Loop;
+		Melee:
+			"####" D 3 A_FaceTarget;
+			"####" D 0 A_Jump(64,"Missed");
+			"####" E 3 A_CustomMeleeAttack(Random(1, 4), "batfam/idle", "", "");
+			"####" FE 3 A_FaceTarget;
+			Goto See;
+		Missed: //here in order to avoid looping attacks, so the critter is less threatening
+			"####" E 3;
+			"####" DE 3 A_FaceTarget;
+			Goto See;
+		Pain:
+			"####" D 2;
+			"####" D 2 A_Pain;
+			Goto See;
+		Death:
+			"####" D 5 A_ScreamAndUnblock;
+			"####" EFD 5 {bMThruSpecies = TRUE; bThruSpecies = TRUE; bNoGravity = FALSE;}
+			Goto Death+1;
+		Crash:
+			"####" G 6 A_ScreamAndUnblock;
+			"####" H 7;
+			"####" I 8;
+			"####" J 4;
+			UWDT G -1 {A_SetScale(0.45); bMThruSpecies = TRUE; bThruSpecies = TRUE; bNoGravity = FALSE;}
+			Stop;
+	}
+}
+
+Class HUW_FlockSpawnerBatsF : BOID_Boid
+{
+
+	Override void PostBeginPlay()
+	{
+		FlockID = random(0,255);
+	}
+
+	Default
+	{
+		//$Category HexedUW/Critters
+		//$Title Flock of Bats (Black), FRIENDLY
+		//$Color 4
+		//$Sprite UWB1A1
+		+NOINTERACTION
+		+NOGRAVITY
+		+FRIENDLY
+	}
+	
+	States
+	{
+	Spawn:
+	Active:
+		TNT1 A 0;
+		TNT1 A 0 A_JumpIf(args[0] == 0, "BoidsIsNull");
+	SpawnBoids:
+		TNT1 A 0 A_SetArg(4, args[0]);
+	SpawnBoids2:
+		TNT1 A 1 A_JumpIf(args[4] == 0, "NoMoreBoids");
+		TNT1 A 0 A_SpawnItemEx("HUW_BatSceneryF",20,0,40,0,0,0,0,SXF_SETMASTER|SXF_NOCHECKPOSITION);
+		TNT1 A 0 A_SetArg(4, args[4] - 1);
+		Goto SpawnBoids2;
+	BoidsIsNull:
+		TNT1 A 1 A_SetArg(0, 8);
+		goto SpawnBoids;
+	NoMoreBoids:
+		TNT1 A -1;
+		Stop;
+	Inactive:
+		TNT1 A 0 A_RemoveChildren (TRUE, RMVF_EVERYTHING);
+		TNT1 A -1;
+		Stop;
+	XDeath:
+	Death:
+		TNT1 A 1;
+		Stop;
+	}
+}
+
+class HUW_BatSceneryE : BOID_Boid
+{
+	Default
+	{
+		-CANPUSHWALLS
+		-CANUSEWALLS
+		-MTHRUSPECIES
+		+FLOAT
+		+NOGRAVITY
+		+NOINFIGHTING
+		+THRUSPECIES
+		SeeSound "batfam/idle";
+		PainSound "batfam/pain";
+		DeathSound "batfam/death";
+		ActiveSound "batfam/idle";
+	}
+	
+	Override void PostBeginPlay()
+	{
+		if(master)
+		{
+			FlockID = Boid_Boid(master).FlockID;
+		}
+	}
+	
+	Override Void Tick()
+	{
+		BoidFlight(MaxVelocity: 36, CloseToMaster: TRUE, DistanceFromMaster: 200);
+		Super.tick();
+	}
+	
+	Default
+	{
+		Health 100;
+		Radius 16;
+		Height 32;
+		FloatSpeed 2.33333333;
+		Speed 3.33333334;
+		PainChance 200;
+		Monster;
+		Tag "$T_UWBAT1";
+		HitObituary "$HB_UWBAT1";
+		Boid_Boid.BoidActor "HUW_BatSceneryE";
+		Boid_Boid.HorizonNormalizer 40;
+		-BRIGHT
+	}
+
+	States
+	{
+		Spawn:
+			UWB1 ABCB 3 A_Look();
+			Loop;
+		See:
+			"####" A 1 A_Chase;
+			"####" AA 1 A_Chase(null,null,CHF_NOPLAYACTIVE);
+			"####" B 1 A_Chase;
+			"####" BB 1 A_Chase(null,null,CHF_NOPLAYACTIVE);
+			"####" C 1 A_Chase;
+			"####" CC 1 A_Chase(null,null,CHF_NOPLAYACTIVE);
+			Loop;
+		Melee:
+			"####" D 3 A_FaceTarget;
+			"####" D 0 A_Jump(64,"Missed");
+			"####" E 3 A_CustomMeleeAttack(Random(1, 4), "batfam/idle", "", "");
+			"####" FE 3 A_FaceTarget;
+			Goto See;
+		Missed: //here in order to avoid looping attacks, so the critter is less threatening
+			"####" E 3;
+			"####" DE 3 A_FaceTarget;
+			Goto See;
+		Pain:
+			"####" D 2;
+			"####" D 2 A_Pain;
+			Goto See;
+		Death:
+			"####" D 5 A_ScreamAndUnblock;
+			"####" EFD 5 {bMThruSpecies = TRUE; bThruSpecies = TRUE; bNoGravity = FALSE;}
+			Goto Death+1;
+		Crash:
+			"####" G 6 A_ScreamAndUnblock;
+			"####" H 7;
+			"####" I 8;
+			"####" J 4;
+			UWDT G -1 {A_SetScale(0.45); bMThruSpecies = TRUE; bThruSpecies = TRUE; bNoGravity = FALSE;}
+			Stop;
+	}
+}
+
+Class HUW_FlockSpawnerBatsE : BOID_Boid
+{
+
+	Override void PostBeginPlay()
+	{
+		FlockID = random(0,255);
+	}
+
+	Default
+	{
+		//$Category HexedUW/Critters
+		//$Title Flock of Bats (Black), FRIENDLY
+		//$Color 4
+		//$Sprite UWB1A1
+		+NOINTERACTION
+		+NOGRAVITY
+	}
+	
+	States
+	{
+	Spawn:
+	Active:
+		TNT1 A 0;
+		TNT1 A 0 A_JumpIf(args[0] == 0, "BoidsIsNull");
+	SpawnBoids:
+		TNT1 A 0 A_SetArg(4, args[0]);
+	SpawnBoids2:
+		TNT1 A 1 A_JumpIf(args[4] == 0, "NoMoreBoids");
+		TNT1 A 0 A_SpawnItemEx("HUW_BatSceneryE",20,0,40,0,0,0,0,SXF_SETMASTER|SXF_NOCHECKPOSITION);
+		TNT1 A 0 A_SetArg(4, args[4] - 1);
+		Goto SpawnBoids2;
+	BoidsIsNull:
+		TNT1 A 1 A_SetArg(0, 8);
+		goto SpawnBoids;
+	NoMoreBoids:
+		TNT1 A -1;
+		Stop;
+	Inactive:
+		TNT1 A 0 A_RemoveChildren (TRUE, RMVF_EVERYTHING);
+		TNT1 A -1;
+		Stop;
+	XDeath:
+	Death:
+		TNT1 A 1;
+		Stop;
+	}
+}
