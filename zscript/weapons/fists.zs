@@ -45,16 +45,13 @@ class HUW_WeapFist : AvatarWeapon
 		RPCH E 1 A_WeaponReady;
 		Loop;
 	Fire:
-		RPCH D 0 A_UWPunchInit;
-		Goto Ready;
-	Punch:
 		RPCH D 8 Offset (5, 40);
 		RPCH C 7 Offset (5, 40);
 		RPCH B 7 Offset (5, 40) A_UWPunchAttack;
 		RPCH C 7 Offset (5, 40);
 		RPCH D 8 Offset (5, 40) A_ReFire;
 		Goto Ready;
-	Fire2:
+	Fire.Powered:
 		RPCH DE 7 Offset (5, 40);
 		RPCH E 1 Offset (15, 50);
 		RPCH E 2 Offset (25, 60);
@@ -63,30 +60,6 @@ class HUW_WeapFist : AvatarWeapon
 		RPCH E 1 Offset (55, 90);
 		RPCH E 2 Offset (65, 100);
 		RPCH E 10 Offset (0, 150);
-		Goto Ready;
-	ShieldRaise: //needs to be adjusted for proper behavior yet
-		RPCH F 1 Offset(84, 68);
-		RPCH F 1 Offset(72, 56);
-		RPCH F 1 Offset(56, 40);
-		RPCH F 1 Offset(40, 24);
-		RPCH F 1 Offset(24, 7);
-		RPCH F 1 Offset(6, 2);
-		RPCH F 2 Offset(4, 0);
-		RPCH F 4 Offset(-8, -2);
-	ShieldRaise.Hold:
-		RPCH F 8 Offset(-16, -8) { A_ReFire(); bDontBlast = true; bReflective = true; }
-	ShieldRaise.Lower:
-		RPCH F 4 Offset(-8, -2);
-		RPCH F 2 Offset(4, 0);
-		RPCH F 1 Offset(6, 2);
-		RPCH F 1 Offset(24, 7) { bDontBlast = false; bReflective = false; }
-		RPCH F 1 Offset(36, 20);
-		RPCH F 1 Offset(44, 28);
-		RPCH F 1 Offset(52, 36);
-		RPCH F 1 Offset(60, 44);
-		RPCH F 1 Offset(68, 52);
-		RPCH F 1 Offset(76, 60);
-		RPCH F 1 Offset(82, 66);
 		Goto Ready;
 	}
 
@@ -112,7 +85,7 @@ class HUW_WeapFist : AvatarWeapon
 				if (weaponspecial >= 3)
 				{
 					weaponspecial = 0;
-					player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire2"));
+					player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Powered"));
 					A_StartSound ("*fistgrunt", CHAN_VOICE);
 				}
 				return;
