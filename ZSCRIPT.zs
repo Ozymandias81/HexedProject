@@ -39,9 +39,13 @@ class SimpleActor : Actor
 }
 
 //MAIN
+//#include "zscript/base.zs"				//core
 #include "zscript/avatar.zs"			//player
-#include "zscript/base.zs"				//core
 #include "zscript/models.zs"
+
+//SCENERY
+//#include "zscript/flora.zs"
+//#include "zscript/fauna.zs"
 #include "zscript/props.zs"
 
 //SFX
@@ -51,15 +55,18 @@ class SimpleActor : Actor
 #include "zscript/sfx/splashes.zs"
 #include "zscript/sfx/underwater.zs"
 
-//INVENTORY
+//INTERACTIVES
 #include "zscript/interactive/fountain.zs"
+
+//INVENTORY
 #include "zscript/inventory/sapling.zs"
 #include "zscript/inventory/torches.zs"
 
 //WEAPONS
-#include "zscript/weapons/axes.zs"
+#include "zscript/weapons/main.zs"				//actions
 #include "zscript/weapons/fists.zs"
 #include "zscript/weapons/maces.zs"
+#include "zscript/weapons/axes.zs"
 #include "zscript/weapons/swords.zs"
 //#include "zscript/weapons/others.zs"
 

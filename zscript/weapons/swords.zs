@@ -88,7 +88,7 @@ class HUW_WeapSword : AvatarWeapon
 		RSWR V 3 Offset (5, 40);
 		RSWR W 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
-	Fire2:
+	Fire.Powered:
 		RSWR CB 5 Offset (5, 40);
 		RSWR A 1 Offset (15, 50);
 		RSWR A 2 Offset (25, 60);
@@ -125,7 +125,7 @@ class HUW_WeapSword : AvatarWeapon
 				if (weaponspecial >= 3)
 				{
 					weaponspecial = 0;
-					player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire2"));
+					player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Powered"));
 					A_StartSound ("*fistgrunt", CHAN_VOICE);
 				}
 				return;

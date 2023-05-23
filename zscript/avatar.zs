@@ -20,6 +20,25 @@
  * SOFTWARE.
 */
 
+//Dummy Item for hiding the HUD
+Class CutsceneEnabled : Inventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1;
+		Stop;
+	}
+}
+
+//Specifical counters
+
+//Interactives
+class FountainCounter : Inventory { Default { Inventory.MaxAmount 1; } }
+
+//Armors
+class ShieldParry: Inventory { Default { Inventory.MaxAmount 30; } }
+
 class AvatarPlayer : PlayerPawn //Consider to include modified "melee" based variants of Hexen classes as 2-3-4 choice, should replace MagePlayer
 {
 	Default

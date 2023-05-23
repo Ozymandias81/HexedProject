@@ -85,7 +85,7 @@ class HUW_WeapAxe : AvatarWeapon
 		RAXE V 3 Offset (5, 40);
 		RAXE W 6 Offset (5, 80) A_ReFire;
 		Goto Ready;
-	Fire2:
+	Fire.Powered:
 		RAXE CB 5 Offset (5, 40);
 		RAXE A 1 Offset (15, 50);
 		RAXE A 2 Offset (25, 60);
@@ -122,7 +122,7 @@ class HUW_WeapAxe : AvatarWeapon
 				if (weaponspecial >= 3)
 				{
 					weaponspecial = 0;
-					player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire2"));
+					player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState("Fire.Powered"));
 					A_StartSound ("*fistgrunt", CHAN_VOICE);
 				}
 				return;
