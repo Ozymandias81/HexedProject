@@ -58,7 +58,7 @@ Struct BOID_BoidArray
 //This class has a lot of functions that you can use outside of the BoidFlight function
 //BoidFlight has to be used every tick for best results so tick override is recommended.
 
-Class BOID_Boid : ACTOR
+Class BOID_Boid : Actor
 {
 	Double VelocityMax;
 	BOID_BoidArray BoidArray;
@@ -108,14 +108,13 @@ Class BOID_Boid : ACTOR
 	Default
 	{
 		Health 30;
-// 		Monster;
+		-COUNTKILL;
 		+THRUSPECIES;
-		-CountKill;
 		+NOGRAVITY;
 		+NOBLOCKMONST;
 		+NOFRICTION;
 		Speed 0.1;
-		radius 10;
+		Radius 10;
 		BOID_Boid.BoidActor "BOID_Boid";
 		BOID_Boid.MaxVelocity 20;
 		BOID_Boid.VelocityAcceleration .2;
@@ -134,16 +133,16 @@ Class BOID_Boid : ACTOR
 		BOID_Boid.VectorTurn .6;
 		BOID_Boid.FlockID 0;
 	}
-	States
+	
+	States //to be removed
 	{
-		Spawn:
-			SBAT ABCB 3;
-			Loop;
-		Death:
-			FAXB FGHIJK 2;
-			Stop;
+	Spawn:
+		SBAT ABCB 3;
+		Loop;
+	Death:
+		FAXB FGHIJK 2;
+		Stop;
 	}
-
 
 ////////////////////////////////////////////////////////////////////////////////
 //I found this black magic online, so don't ask me how it works. It just does.//
@@ -859,7 +858,7 @@ Class BOID_Boid : ACTOR
 //LilBirb from To the Moon
 //Sprite edits by Enjay
 
-Class NJ_FlockBoidCrow : BOID_Boid
+Class NJ_FlockBoidCrow : BOID_Boid //to be removed
 {
         Override void PostBeginPlay()
         {
@@ -905,7 +904,7 @@ Class NJ_FlockBoidCrow : BOID_Boid
 	}	
 }
 
-Class NJ_FlockSpawnerCrow : BOID_Boid
+Class NJ_FlockSpawnerCrow : BOID_Boid //to be removed
 {
 
         Override void PostBeginPlay()
@@ -955,7 +954,7 @@ Class NJ_FlockSpawnerCrow : BOID_Boid
 	}
 }
 
-Class NJ_FlockBoidFlappy : NJ_FlockBoidCrow
+Class NJ_FlockBoidFlappy : NJ_FlockBoidCrow //to be removed
 {
 	Default
 	{
@@ -989,7 +988,7 @@ Class NJ_FlockBoidFlappy : NJ_FlockBoidCrow
 	}	
 }
 
-Class NJ_FlockSpawnerFlappy : NJ_FlockSpawnerCrow
+Class NJ_FlockSpawnerFlappy : NJ_FlockSpawnerCrow //to be removed
 {
 
 	States
@@ -1028,7 +1027,7 @@ Class NJ_FlockSpawnerFlappy : NJ_FlockSpawnerCrow
 	}
 }
 
-Class NJ_FlockBoidLilBirb : NJ_FlockBoidCrow
+Class NJ_FlockBoidLilBirb : NJ_FlockBoidCrow //to be removed
 {
 	Default
 	{
@@ -1042,8 +1041,6 @@ Class NJ_FlockBoidLilBirb : NJ_FlockBoidCrow
 		Boid_Boid.MaxDistanceToBoid 512;
 		Boid_Boid.BoidCohesion 4;
 		Boid_Boid.MaxRandomMoveAngle 240;
-		
-		
 	}
 
 	States
@@ -1066,7 +1063,7 @@ Class NJ_FlockBoidLilBirb : NJ_FlockBoidCrow
 	}	
 }
 
-Class NJ_FlockSpawnerLilBirb : NJ_FlockSpawnerCrow
+Class NJ_FlockSpawnerLilBirb : NJ_FlockSpawnerCrow //to be removed
 {
 
 	States

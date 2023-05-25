@@ -121,6 +121,20 @@ material texture "textures/doors/UWDR_14.png"
 }
 
 //LIGHTDEFS
+pointlight HUW_PlayerLight //for test purpose, should be replaced later with a sort of shader, idea by sir_robin
+{
+	color 0.25 0.25 1.0
+	size 96
+	offset 0 48 0
+	subtractive 0
+	attenuate 1
+	dontlightself 0
+	dontlightactors 0
+	noshadowmap 1
+}
+
+object AvatarPlayer {frame MAF3 {light HUW_PlayerLight}}
+
 FlickerLight2 LANT01
 {
 	Color 1.00 0.69 0.48
