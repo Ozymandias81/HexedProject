@@ -1,5 +1,43 @@
 version "4.7.1"
 
+/*
+	Shader controller base class
+
+	This allows mappers to control shaders using the GiveInventory/TakeInventory
+	ACS functions.
+
+	Do not use this directly! Instead, make an actor class that inherits from
+	ShaderControl. Set the ShaderControl.Shader property to the name of the
+	shader to control. The shader must be defined in GLDEFS.
+
+	To enable a shader, give 2 of the ShaderControl subclass item to the player.
+	For example:
+
+	GiveInventory("ShakeShaderControl", 2);
+
+	To disable a shader, take 1 of the shader control item away so that the
+	player only has 1 of said item. For example:
+
+	TakeInventory("ShakeShaderControl", 1);
+	or
+	SetInventory("ShakeShaderControl", 1);
+
+	Note that the latter requires you to define the SetInventory function in
+	your ACS code.
+*/
+
+class ShaderControl : Inventory
+{
+	string ShaderToControl;
+	property Shader: ShaderToControl;
+	Default
+	{
+		Inventory.MaxAmount 0x7fffffff;
+	}
+
+	virtual ui void SetUniforms(PlayerInfo p, RenderEvent e) {}
+}
+
 // Actor that does the bare minumum of ticking
 // Use for static, non-interactive actors
 //
@@ -50,15 +88,18 @@ class SimpleActor : Actor
 
 //SFX
 #include "zscript/sfx/boids.zs"
+#include "zscript/sfx/fisheye.zs"
 #include "zscript/sfx/heateffect.zs"
 #include "zscript/sfx/smoke.zs"
 #include "zscript/sfx/splashes.zs"
 #include "zscript/sfx/underwater.zs"
 
 //INTERACTIVES
+#include "zscript/interactive/crystal.zs"
 #include "zscript/interactive/fountain.zs"
 
 //INVENTORY
+#include "zscript/inventory/runes.zs"
 #include "zscript/inventory/sapling.zs"
 #include "zscript/inventory/torches.zs"
 

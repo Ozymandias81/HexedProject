@@ -1,5 +1,14 @@
+//FishEye shader
+HardwareShader PostProcess Scene //BeforeBloom
+{
+	Name "fisheyeshader"
+	Shader "shaders/fisheye.fp" 330
+	Uniform float amount
+}
+
 //HeatEffect shader
-HardwareShader PostProcess scene {
+HardwareShader PostProcess Scene
+{
 	Name "heatshader"
 	Shader "shaders/heat.fp" 330
 	Uniform float amount
@@ -7,7 +16,7 @@ HardwareShader PostProcess scene {
 }
 
 //Underwater shader
-HardwareShader PostProcess scene
+HardwareShader PostProcess Scene
 {
 	Name "watershader"
 	Shader "shaders/uwater.fp" 330
@@ -15,7 +24,7 @@ HardwareShader PostProcess scene
 	Uniform float timer // placeholder?
 }
 
-HardwareShader PostProcess scene
+HardwareShader PostProcess Scene
 {
 	Name "waterzoomshader"
 	Shader "shaders/uwaterzoom.fp" 330

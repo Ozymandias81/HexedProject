@@ -204,9 +204,10 @@ DoomEdNums
 	12034 = NJ_FlockSpawnerCrow
 	12035 = NJ_FlockSpawnerLilBirb
 	12036 = NJ_FlockSpawnerFlappy
+
 	12037 = HUW_FlockSpawnerBatsE
 	12038 = HUW_FlockSpawnerBatsF
-	
+
 	18000 = PaganU8
 	19000 = HUW_Bat2 //new
 	19001 = HUW_Ghost2 //new
@@ -258,6 +259,7 @@ DoomEdNums
 	20223 = HUW_BloodPool2
 	20241 = HUW_RuneJux
 	20246 = HUW_RuneOrt
+	20279 = HUW_CrystalBall
 	20301 = HUW_OilPickup
 	20303 = HUW_Cauldron1
 	20340 = HUW_Rock1
@@ -265,6 +267,8 @@ DoomEdNums
 	20457 = HUW_Fountain
 	20458 = HUW_SilverSapling
 	21000 = HUW_Table1
+
 	32029 = HeatEffectGiver
 	32030 = DarkSmokeSpawner
+	32031 = FishEyeEffectGiver
 }

@@ -19,40 +19,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
 **/
-/*
-	Shader controller base class
-
-	This allows mappers to control shaders using the GiveInventory/TakeInventory
-	ACS functions.
-
-	Do not use this directly! Instead, make an actor class that inherits from
-	ShaderControl. Set the ShaderControl.Shader property to the name of the
-	shader to control. The shader must be defined in GLDEFS.
-
-	To enable a shader, give 2 of the ShaderControl subclass item to the player.
-	For example:
-
-	GiveInventory("ShakeShaderControl", 2);
-
-	To disable a shader, take 1 of the shader control item away so that the
-	player only has 1 of said item. For example:
-
-	TakeInventory("ShakeShaderControl", 1);
-	or
-	SetInventory("ShakeShaderControl", 1);
-
-	Note that the latter requires you to define the SetInventory function in
-	your ACS code.
-*/
-class ShaderControl : Inventory {
-	string ShaderToControl;
-	property Shader: ShaderToControl;
-	Default {
-		Inventory.MaxAmount 0x7fffffff;
-	}
-
-	virtual ui void SetUniforms(PlayerInfo p, RenderEvent e) {}
-}
 
 class CustomShaderHandler : StaticEventHandler
 {

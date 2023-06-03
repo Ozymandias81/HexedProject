@@ -395,46 +395,6 @@ class HUW_BloodPool2 : HUW_BloodPool1
 	}
 }
 
-class HUW_RuneJux : Actor
-{
-	Default
-	{
-		//$Category HexedUW/Runes
-		//$Title Rune - Jux
-		Height 8;
-		Radius 8;
-		Scale 0.45;
-		+NOGRAVITY;
-	}
-	
-	States
-	{
-	Spawn:
-		UWRU J -1;
-		Stop;
-	}
-}
-
-class HUW_RuneOrt : Actor
-{
-	Default
-	{
-		//$Category HexedUW/Runes
-		//$Title Rune - Ort
-		Height 8;
-		Radius 8;
-		Scale 0.45;
-		+NOGRAVITY;
-	}
-	
-	States
-	{
-	Spawn:
-		UWRU O -1;
-		Stop;
-	}
-}
-
 class HUW_Cauldron1 : Actor
 {
 	Default
