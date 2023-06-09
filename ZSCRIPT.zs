@@ -30,12 +30,43 @@ class ShaderControl : Inventory
 {
 	string ShaderToControl;
 	property Shader: ShaderToControl;
+	
 	Default
 	{
 		Inventory.MaxAmount 0x7fffffff;
 	}
 
 	virtual ui void SetUniforms(PlayerInfo p, RenderEvent e) {}
+}
+
+class CustomShaderHandler : StaticEventHandler
+{
+	override void RenderOverlay(RenderEvent e)
+	{
+		PlayerInfo p = players[consoleplayer];
+		ThinkerIterator shaderIter = ThinkerIterator.Create("ShaderControl");
+
+		ShaderControl shaderControl;
+
+		while (shaderControl = ShaderControl(shaderIter.Next()))
+		{
+			if (shaderControl.Owner && shaderControl.Owner == p.mo) {
+				//Console.Printf("Shader: %s", shaderControl.ShaderToControl);
+				if (shaderControl.amount >= 2)
+				{
+					Shader.SetUniform1f(p, shaderControl.ShaderToControl, "timer", gametic + e.FracTic);
+					Shader.SetUniform1f(p, shaderControl.ShaderToControl, "amount", shaderControl.amount - 1);
+					Shader.SetUniform1f(p, shaderControl.ShaderToControl, "alpha", shaderControl.alpha);
+					shaderControl.SetUniforms(p, e);
+					Shader.SetEnabled(p, shaderControl.ShaderToControl, true);
+				}
+				else
+				{
+					Shader.SetEnabled(p, shaderControl.ShaderToControl, false);
+				}
+			}
+		}
+	}
 }
 
 // Actor that does the bare minumum of ticking

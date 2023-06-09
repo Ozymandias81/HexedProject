@@ -4,7 +4,7 @@
 #define DO_CHROMO 1
 
 // Fisheye effect strength - higher number means more intense effect
-#define FISHEYE_EFFECT_STRENGTH 0.0452
+#define FISHEYE_EFFECT_STRENGTH 0.0904
 
 void main(void)
 {
