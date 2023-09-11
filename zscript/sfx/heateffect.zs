@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-class EffectSpawner : SwitchableDecoration //following code has been adapted by Ozymandias81 for this remaster, a bit different from BoA code
+class EffectSpawner : SwitchableDecoration //following code has been adapted by Ozymandias81, a bit different from BoA code
 {
 	transient CVar switchcvar;
 	String switchvar;
